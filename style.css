@@ -1,26 +1,36 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
+/* GLOBAL */
 body {
   background: #F8FAFC;
   color: #0F172A;
 }
 
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 60px;
   background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
 }
 
 .logo {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
+  color: #1E88E5;
+}
+
+.lang-switch {
+  margin: 0 8px;
+  cursor: pointer;
   color: #1E88E5;
 }
 
@@ -31,13 +41,10 @@ body {
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
+  margin-left: 12px;
 }
 
-.btn-primary.large {
-  padding: 14px 28px;
-  font-size: 16px;
-}
-
+/* HERO */
 .hero {
   display: flex;
   align-items: center;
@@ -45,8 +52,12 @@ body {
   padding: 80px 60px;
 }
 
+.hero-text {
+  max-width: 480px;
+}
+
 .hero-text h1 {
-  font-size: 48px;
+  font-size: 46px;
   margin-bottom: 20px;
 }
 
@@ -59,6 +70,7 @@ body {
   max-width: 420px;
 }
 
+/* FEATURES */
 .features {
   padding: 60px;
   text-align: center;
@@ -75,24 +87,80 @@ body {
   background: white;
   padding: 30px;
   width: 260px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
 
-.how {
-  background: white;
+/* SERVICE VISUAL */
+.service-visual {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 60px;
+  background: white;
+}
+
+.service-img img {
+  max-width: 380px;
+}
+
+.service-text {
+  max-width: 420px;
+}
+
+/* TRUST */
+.trust {
   text-align: center;
+  padding: 60px;
 }
 
-.how ol {
+.trust img {
+  max-width: 320px;
   margin-top: 20px;
-  font-size: 18px;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
   font-size: 14px;
   color: #64748B;
+}
+
+/* RTL SUPPORT */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="rtl"] .hero,
+html[dir="rtl"] .service-visual {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .btn-primary {
+  margin-left: 0;
+  margin-right: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero,
+  .service-visual {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img img,
+  .service-img img {
+    margin-top: 30px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    padding: 20px;
+  }
 }
