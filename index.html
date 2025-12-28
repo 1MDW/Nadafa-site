@@ -1,129 +1,160 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <title>Nadafa – Service de Nettoyage</title>
+  <meta charset="UTF-8" />
+  <title>Nadafa – Service de ménage à domicile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Icons -->
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
 <!-- ================= NAVBAR ================= -->
 <header class="navbar">
   <div class="logo">Nadafa</div>
 
-  <nav class="nav-links">
-    <a href="index.html" class="nav-link">Accueil</a>
-    <a href="tarifs.html" class="nav-link">Tarifs</a>
-    <a href="reservation.html" class="btn-primary">Réserver</a>
-    <a href="https://wa.me/212600000000" target="_blank" class="btn-whatsapp">
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
-  </nav>
+  <div>
+    <span class="lang-switch" onclick="switchLang('fr')">FR</span>
+    |
+    <span class="lang-switch" onclick="switchLang('ar')">AR</span>
 
-  <div class="lang-box">
-    <span class="lang-switch" onclick="setLang('fr')">FR</span> |
-    <span class="lang-switch" onclick="setLang('ar')">AR</span>
+    <a
+      href="https://wa.me/212600000000"
+      target="_blank"
+      class="btn-whatsapp"
+      style="margin-left:15px"
+    >
+      Réserver via WhatsApp
+    </a>
   </div>
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="hero-pro">
-  <div class="hero-content">
-    <h1 data-fr="Service de nettoyage professionnel"
-        data-ar="خدمة تنظيف احترافية">
-      Service de nettoyage professionnel
-    </h1>
+<section class="hero">
 
-    <p data-fr="Nous offrons des services de ménage fiables pour maisons et bureaux."
-       data-ar="نقدم خدمات تنظيف موثوقة للمنازل والمكاتب.">
-      Nous offrons des services de ménage fiables pour maisons et bureaux.
-    </p>
+  <!-- FR -->
+  <div class="hero-text lang-fr">
+    <h1>Le ménage, sans stress.</h1>
+    <p>Réservez une femme de ménage fiable et professionnelle en quelques clics.</p>
 
-    <div class="hero-buttons">
-      <a href="reservation.html" class="btn-primary">
-        Réserver maintenant
-      </a>
-
-      <a href="https://wa.me/212600000000" target="_blank" class="btn-whatsapp home-whatsapp">
-        <i class="fa-brands fa-whatsapp"></i>
-        Réserver via WhatsApp
-      </a>
-    </div>
+    <a href="reservation.html" class="btn-primary">
+      Réserver maintenant
+    </a>
   </div>
 
-  <!-- 3 IMAGES -->
-  <div class="hero-images">
-    <img src="img/trust-cleaning.jpg" alt="Nettoyage maison">
-    <img src="img/service-cleaning.jpg" alt="Nettoyage salon">
-    <img src="img/hero-cleaning.jpg" alt="Nettoyage bureau">
+  <!-- AR -->
+  <div class="hero-text lang-ar">
+    <h1>النظافة بلا تعب</h1>
+    <p>احجز عاملة نظافة موثوقة وبكل سهولة.</p>
+
+    <a href="reservation.html" class="btn-primary">
+      احجز الآن
+    </a>
   </div>
+
+  <div class="hero-img">
+    <img src="img/clean1.jpg" alt="Service de ménage">
+  </div>
+
+</section>
+
+<!-- ================= 3 IMAGES SECTION ================= -->
+<section class="service-visual">
+
+  <div class="service-img">
+    <img src="img/clean2.jpg" alt="Nettoyage salon">
+  </div>
+
+  <div class="service-text lang-fr">
+    <h2>Un service propre et fiable</h2>
+    <p>Nous adaptons nos services à vos besoins et à votre emploi du temps.</p>
+  </div>
+
+  <div class="service-text lang-ar">
+    <h2>خدمة نظافة موثوقة</h2>
+    <p>نقدّم خدمات تنظيف حسب احتياجاتك ووقتك.</p>
+  </div>
+
+</section>
+
+<section class="service-visual">
+
+  <div class="service-text lang-fr">
+    <h2>Pour maisons et bureaux</h2>
+    <p>Nettoyage professionnel avec du personnel qualifié.</p>
+  </div>
+
+  <div class="service-text lang-ar">
+    <h2>للمنازل والمكاتب</h2>
+    <p>تنظيف احترافي بطاقم مؤهل.</p>
+  </div>
+
+  <div class="service-img">
+    <img src="img/clean3.jpg" alt="Nettoyage bureau">
+  </div>
+
 </section>
 
 <!-- ================= FEATURES ================= -->
 <section class="features-section">
-  <h2 data-fr="Pourquoi nous choisir ?"
-      data-ar="لماذا تختارنا؟">
-    Pourquoi nous choisir ?
-  </h2>
+
+  <div class="lang-fr">
+    <h2>Pourquoi Nadafa ?</h2>
+  </div>
+
+  <div class="lang-ar">
+    <h2>لماذا نضافة؟</h2>
+  </div>
 
   <div class="cards">
     <div class="card">
-      <i class="fa fa-user-check fa-2x"></i>
-      <h3 data-fr="Professionnel"
-          data-ar="احترافي">
-        Professionnel
-      </h3>
-      <p data-fr="Personnel qualifié et expérimenté"
-         data-ar="طاقم مؤهل وذو خبرة">
-        Personnel qualifié et expérimenté
-      </p>
+      <h3>Rapide</h3>
+      <p>Réservation en moins de 2 minutes.</p>
     </div>
 
     <div class="card">
-      <i class="fa fa-clock fa-2x"></i>
-      <h3 data-fr="Ponctuel"
-          data-ar="في الوقت">
-        Ponctuel
-      </h3>
-      <p data-fr="Respect total des horaires"
-         data-ar="الالتزام التام بالمواعيد">
-        Respect total des horaires
-      </p>
+      <h3>Fiable</h3>
+      <p>Personnel vérifié et expérimenté.</p>
     </div>
 
     <div class="card">
-      <i class="fa fa-star fa-2x"></i>
-      <h3 data-fr="Qualité"
-          data-ar="جودة">
-        Qualité
-      </h3>
-      <p data-fr="Résultat propre et garanti"
-         data-ar="نتائج نظيفة ومضمونة">
-        Résultat propre et garanti
-      </p>
+      <h3>Flexible</h3>
+      <p>Une fois ou régulièrement.</p>
     </div>
   </div>
+
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer>
-  <p>© 2025 Nadafa – Tous droits réservés</p>
+  <div class="lang-fr">
+    <p>© 2025 Nadafa – Maroc</p>
+  </div>
+
+  <div class="lang-ar">
+    <p>© 2025 نضافة – المغرب</p>
+  </div>
 </footer>
 
 <!-- ================= LANGUAGE SCRIPT ================= -->
 <script>
-function setLang(lang) {
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+function switchLang(lang) {
+  const fr = document.querySelectorAll('.lang-fr');
+  const ar = document.querySelectorAll('.lang-ar');
 
-  document.querySelectorAll('[data-fr]').forEach(el => {
-    el.textContent = el.getAttribute(`data-${lang}`);
-  });
+  if (lang === 'fr') {
+    fr.forEach(e => e.style.display = 'block');
+    ar.forEach(e => e.style.display = 'none');
+    document.documentElement.lang = 'fr';
+    document.documentElement.dir = 'ltr';
+  } else {
+    fr.forEach(e => e.style.display = 'none');
+    ar.forEach(e => e.style.display = 'block');
+    document.documentElement.lang = 'ar';
+    document.documentElement.dir = 'rtl';
+  }
 }
 </script>
 
