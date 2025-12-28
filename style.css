@@ -298,6 +298,34 @@ html[dir="rtl"] .icon-text {
 }
 
 /* =========================
+   BACK TO HOME BUTTON
+========================= */
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: #E3F2FD;
+  color: #1E88E5;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-back i {
+  font-size: 14px;
+}
+
+.btn-back:hover {
+  background: #BBDEFB;
+}
+
+/* RTL FIX */
+html[dir="rtl"] .btn-back {
+  flex-direction: row-reverse;
+}
+
+/* =========================
    POPULAR
 ========================= */
 .popular {
@@ -393,4 +421,5 @@ html[dir="rtl"] .service-visual {
     font-size: 34px;
   }
 }
+
 
