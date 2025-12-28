@@ -381,4 +381,13 @@ html[dir="rtl"] .secure-text i {
   margin-left: 6px;
 }
 
+/* WhatsApp button - HOME only */
+.home-whatsapp {
+  background: #25D366;
+}
+
+.home-whatsapp:hover {
+  background: #1EBE5D;
+}
+
 
