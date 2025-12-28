@@ -5,59 +5,161 @@
   <title>Nadafa – Service de ménage à domicile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .lang-ar { display: none; direction: rtl; text-align: right; }
+    .lang-fr { display: block; }
+
+    .lang-switch {
+      cursor: pointer;
+      font-weight: 600;
+      margin-left: 20px;
+    }
+  </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
   <div class="logo">Nadafa</div>
-  <a href="https://wa.me/212XXXXXXXXX" class="btn-primary">Réserver</a>
+  <div>
+    <span class="lang-switch" onclick="switchLang('fr')">FR</span>
+    |
+    <span class="lang-switch" onclick="switchLang('ar')">AR</span>
+    <a href="https://wa.me/212XXXXXXXXX" class="btn-primary">Réserver</a>
+  </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-text">
+
+  <!-- FR -->
+  <div class="hero-text lang-fr">
     <h1>Le ménage, sans stress.</h1>
     <p>Réservez une femme de ménage fiable en quelques clics.</p>
-    <a href="https://wa.me/212XXXXXXXXX" class="btn-primary large">Réserver maintenant</a>
+    <a href="https://wa.me/212XXXXXXXXX" class="btn-primary large">
+      Réserver maintenant
+    </a>
   </div>
+
+  <!-- AR -->
+  <div class="hero-text lang-ar">
+    <h1>النظافة بلا تعب ولا قلق</h1>
+    <p>احجز عاملة نظافة موثوقة بكل سهولة.</p>
+    <a href="https://wa.me/212XXXXXXXXX" class="btn-primary large">
+      احجز الآن
+    </a>
+  </div>
+
   <div class="hero-img">
-    <img src="hero-cleaning.png" alt="Ménage professionnel">
+    <img src="hero-cleaning.png" alt="Service de ménage professionnel">
   </div>
+
 </section>
 
+<!-- FEATURES -->
 <section class="features">
-  <h2>Pourquoi Nadafa ?</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Rapide</h3>
-      <p>Réservation en moins de 2 minutes.</p>
+
+  <!-- FR -->
+  <div class="lang-fr">
+    <h2>Pourquoi Nadafa ?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Rapide</h3>
+        <p>Réservation en moins de 2 minutes.</p>
+      </div>
+      <div class="card">
+        <h3>Fiable</h3>
+        <p>Femmes de ménage vérifiées.</p>
+      </div>
+      <div class="card">
+        <h3>Flexible</h3>
+        <p>Une fois ou chaque semaine.</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>Fiable</h3>
-      <p>Femmes de ménage vérifiées.</p>
+  </div>
+
+  <!-- AR -->
+  <div class="lang-ar">
+    <h2>لماذا نضافة؟</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>سريع</h3>
+        <p>حجز في أقل من دقيقتين.</p>
+      </div>
+      <div class="card">
+        <h3>موثوق</h3>
+        <p>عاملات نظافة تم اختيارهن بعناية.</p>
+      </div>
+      <div class="card">
+        <h3>مرن</h3>
+        <p>مرة واحدة أو بشكل أسبوعي.</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>Flexible</h3>
-      <p>Une fois ou chaque semaine.</p>
-    </div>
+  </div>
+
+</section>
+
+<!-- SERVICE IMAGE -->
+<section class="service-visual">
+  <div class="service-img">
+    <img src="service-cleaning.png" alt="Nettoyage à domicile">
+  </div>
+
+  <div class="service-text lang-fr">
+    <h2>Un service adapté à votre rythme</h2>
+    <p>Une aide-ménagère ponctuelle et professionnelle.</p>
+  </div>
+
+  <div class="service-text lang-ar">
+    <h2>خدمة تناسب نمط حياتك</h2>
+    <p>عاملة نظافة محترفة وفي الوقت المناسب.</p>
   </div>
 </section>
 
-<section class="how">
-  <h2>Comment ça marche ?</h2>
-  <ol>
-    <li>Vous réservez</li>
-    <li>Nous envoyons une aide-ménagère</li>
-    <li>Votre maison est propre</li>
-  </ol>
+<!-- TRUST IMAGE -->
+<section class="trust">
+  <div class="lang-fr">
+    <h2>Ils nous font confiance</h2>
+  </div>
+
+  <div class="lang-ar">
+    <h2>ثقة وراحة</h2>
+  </div>
+
+  <img src="trust-cleaning.png" alt="Clients satisfaits">
 </section>
 
-<img src="hero-cleaning.png" alt="Ménage professionnel">
-
+<!-- FOOTER -->
 <footer>
-  <p>© 2025 Nadafa – Maroc</p>
+  <div class="lang-fr">
+    <p>© 2025 Nadafa – Maroc</p>
+  </div>
+  <div class="lang-ar">
+    <p>© 2025 نضافة – المغرب</p>
+  </div>
 </footer>
+
+<!-- SCRIPT -->
+<script>
+  function switchLang(lang) {
+    const fr = document.querySelectorAll('.lang-fr');
+    const ar = document.querySelectorAll('.lang-ar');
+
+    if (lang === 'fr') {
+      fr.forEach(e => e.style.display = 'block');
+      ar.forEach(e => e.style.display = 'none');
+      document.documentElement.lang = 'fr';
+      document.documentElement.dir = 'ltr';
+    } else {
+      fr.forEach(e => e.style.display = 'none');
+      ar.forEach(e => e.style.display = 'block');
+      document.documentElement.lang = 'ar';
+      document.documentElement.dir = 'rtl';
+    }
+  }
+</script>
+
 </body>
 </html>
-
-
