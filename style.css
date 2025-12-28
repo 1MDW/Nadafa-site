@@ -340,3 +340,38 @@ html[dir="rtl"] .btn-primary {
   width: 100%;
   margin-top: 10px;
 }
+/* =========================
+   RESERVATION BEAUTY
+========================= */
+
+.lang-box {
+  font-weight: 600;
+}
+
+.reservation-form label i {
+  color: #1E88E5;
+  margin-right: 8px;
+}
+
+html[dir="rtl"] .reservation-form label i {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+.secure-text {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #64748B;
+  text-align: center;
+}
+
+.secure-text i {
+  color: #1E88E5;
+  margin-right: 6px;
+}
+
+html[dir="rtl"] .secure-text i {
+  margin-right: 0;
+  margin-left: 6px;
+}
+
