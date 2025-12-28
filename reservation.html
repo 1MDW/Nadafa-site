@@ -11,23 +11,21 @@
 <body>
 
 <!-- NAVBAR -->
-<div style="padding:20px;">
-  <a href="index.html" class="btn-back">
-    <i class="fa-solid fa-arrow-left"></i>
-    <span class="lang-fr">Retour à l’accueil</span>
-    <span class="lang-ar">الرجوع إلى الصفحة الرئيسية</span>
-  </a>
-</div>
-
 <div class="navbar">
   <div class="logo">Nadafa</div>
 
-  <div class="lang-box">
-    <span class="lang-switch" onclick="setLanguage('fr')">FR</span>
-    <span>|</span>
-    <span class="lang-switch" onclick="setLanguage('ar')">AR</span>
-  </div>
+<div class="nav-actions">
+  <a href="index.html" class="nav-link">
+    <i class="fa-solid fa-house"></i>
+    <span class="lang-fr">Accueil</span>
+    <span class="lang-ar">الرئيسية</span>
+  </a>
+
+  <span class="nav-link" onclick="setLanguage('fr')">FR</span>
+  <span>|</span>
+  <span class="nav-link" onclick="setLanguage('ar')">AR</span>
 </div>
+
 
 <!-- HEADER -->
 <section class="page-header">
