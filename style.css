@@ -229,29 +229,6 @@ section {
 .popular {
   border: 2px solid #1E88E5;
 }
-/* ===== LANGUAGE SWITCH ===== */
-.lang-switch {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.lang-switch button {
-  padding: 8px 16px;
-  border: 1px solid #1E88E5;
-  background: white;
-  color: #1E88E5;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.lang-switch button:hover {
-  background: #1E88E5;
-  color: white;
-}
-
 
 /* =========================
    FOOTER
@@ -269,4 +246,5 @@ footer p {
   font-size: 14px;
   opacity: 0.9;
 }
+
 
