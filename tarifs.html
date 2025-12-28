@@ -2,62 +2,126 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Tarifs – Nadafa</title>
+  <title>Tarifs - Nadafa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="navbar">
-  <div class="logo">Nadafa</div>
-  <a href="index.html" class="btn-primary">Accueil</a>
+<!-- ===== HEADER ===== -->
+<header class="page-header">
+  <h1>Nos Tarifs</h1>
+  <p>Des offres claires et adaptées à vos besoins</p>
 </header>
 
-<section class="features">
-  <h1>Nos Tarifs</h1>
+<!-- ===== TARIFS SECTION ===== -->
+<section class="tarifs">
 
-  <div class="cards">
+  <!-- ===== CARTE 1 ===== -->
+  <div class="tarif-card">
+    <h3>Standard</h3>
+    <p class="price">49 DH</p>
 
-    <!-- OFFER 1 -->
-    <div class="card">
-      <h3>Nettoyage ponctuel</h3>
-      <p><strong>80 DH / heure</strong></p>
-      <p>Idéal pour un besoin occasionnel</p>
-      <a class="btn-primary"
-         href="https://wa.me/212XXXXXXXXX?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20nettoyage%20ponctuel.">
-         Réserver
-      </a>
-    </div>
+    <ul class="features">
+      <li class="icon-text">
+        <i class="fa-solid fa-check"></i>
+        <span>Nettoyage de base</span>
+      </li>
+      <li class="icon-text">
+        <i class="fa-solid fa-clock"></i>
+        <span>Intervention rapide</span>
+      </li>
+      <li class="icon-text">
+        <i class="fa-solid fa-user"></i>
+        <span>Personnel qualifié</span>
+      </li>
+    </ul>
 
-    <!-- OFFER 2 -->
-    <div class="card">
-      <h3>Abonnement hebdomadaire</h3>
-      <p><strong>70 DH / heure</strong></p>
-      <p>1 à 2 fois par semaine</p>
-      <a class="btn-primary"
-         href="https://wa.me/212XXXXXXXXX?text=Bonjour%2C%20je%20souhaite%20un%20abonnement%20hebdomadaire.">
-         Réserver
-      </a>
-    </div>
-
-    <!-- OFFER 3 -->
-    <div class="card">
-      <h3>Nettoyage mensuel</h3>
-      <p><strong>75 DH / heure</strong></p>
-      <p>Solution flexible et économique</p>
-      <a class="btn-primary"
-         href="https://wa.me/212XXXXXXXXX?text=Bonjour%2C%20je%20souhaite%20un%20nettoyage%20mensuel.">
-         Réserver
-      </a>
-    </div>
-
+    <button class="btn-reserver">Réserver</button>
   </div>
+
+  <!-- ===== CARTE 2 ===== -->
+  <div class="tarif-card popular">
+    <h3>Premium</h3>
+    <p class="price">89 DH</p>
+
+    <ul class="features">
+      <li class="icon-text">
+        <i class="fa-solid fa-check-double"></i>
+        <span>Nettoyage complet</span>
+      </li>
+      <li class="icon-text">
+        <i class="fa-solid fa-shield"></i>
+        <span>Produits professionnels</span>
+      </li>
+      <li class="icon-text">
+        <i class="fa-solid fa-star"></i>
+        <span>Service prioritaire</span>
+      </li>
+    </ul>
+
+    <button class="btn-reserver">Réserver</button>
+  </div>
+
+  <!-- ===== CARTE 3 ===== -->
+  <div class="tarif-card">
+    <h3>Entreprise</h3>
+    <p class="price">Sur devis</p>
+
+    <ul class="features">
+      <li class="icon-text">
+        <i class="fa-solid fa-building"></i>
+        <span>Bureaux & locaux</span>
+      </li>
+      <li class="icon-text">
+        <i class="fa-solid fa-calendar"></i>
+        <span>Contrat régulier</span>
+      </li>
+      <li class="icon-text">
+        <i class="fa-solid fa-headset"></i>
+        <span>Support dédié</span>
+      </li>
+    </ul>
+
+    <button class="btn-reserver">Contactez-nous</button>
+  </div>
+
 </section>
 
-<footer>
-  <p>© 2025 Nadafa – Maroc</p>
-</footer>
+<!-- ===== VERSION ARABE ===== -->
+<section class="tarifs rtl" dir="rtl">
+
+  <h2 class="section-title">الأسعار</h2>
+
+  <div class="tarif-card">
+    <h3>العرض العادي</h3>
+    <p class="price">49 درهم</p>
+
+    <ul class="features">
+      <li class="icon-text">
+        <i class="fa-solid fa-check"></i>
+        <span>تنظيف أساسي</span>
+      </li>
+      <li class="icon-text">
+        <i class="fa-solid fa-clock"></i>
+        <span>تدخل سريع</span>
+      </li>
+      <li class="icon-text">
+        <i class="fa-solid fa-user"></i>
+        <span>عمال محترفون</span>
+      </li>
+    </ul>
+
+    <button class="btn-reserver">احجز الآن</button>
+  </div>
+
+</section>
 
 </body>
 </html>
