@@ -1,98 +1,82 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
+const content = {
+  ar: {
+    heroTitle: "تنظيف دارك بلا صداع",
+    heroSub: "خدمة تنظيف موثوقة وسهلة للناس اللي ما عندهمش وقت<br>📍 المعاريف – الدار البيضاء",
+    howTitle: "كيفاش كتخدم Nadafa؟",
+    howList: [
+      "كتحجز عبر WhatsApp",
+      "كنعيّنو امرأة تنظيف مجرّبة",
+      "كتخلص من بعد الخدمة"
+    ],
+    servicesTitle: "الخدمات والأسعار",
+    servicesList: [
+      "🧹 تنظيف 2 ساعات — 120 درهم",
+      "🧹 تنظيف 4 ساعات — 220 درهم",
+      "🌟 -20% على أول تجربة"
+    ],
+    whyTitle: "علاش Nadafa؟",
+    whyList: [
+      "نساء مجرّبات ومتحقق من الهوية",
+      "أثمنة واضحة",
+      "حجز سهل وسريع",
+      "احترام وكرامة النساء العاملات"
+    ]
+  },
+  fr: {
+    heroTitle: "Un ménage sans stress",
+    heroSub: "Service de nettoyage fiable et simple<br>📍 Maarif – Casablanca",
+    howTitle: "Comment ça marche ?",
+    howList: [
+      "Réservation via WhatsApp",
+      "Femme de ménage vérifiée",
+      "Paiement après service"
+    ],
+    servicesTitle: "Services & Prix",
+    servicesList: [
+      "🧹 Nettoyage 2h — 120 DH",
+      "🧹 Nettoyage 4h — 220 DH",
+      "-20% première réservation"
+    ],
+    whyTitle: "Pourquoi Nadafa ?",
+    whyList: [
+      "Intervenantes vérifiées",
+      "Prix transparents",
+      "Réservation rapide",
+      "Respect et dignité"
+    ]
+  }
+};
 
-body {
-  background: #F8FAFC;
-  color: #0F172A;
-}
+function setLang(lang) {
+  document.body.dir = lang === "ar" ? "rtl" : "ltr";
+  document.getElementById("hero-title").innerHTML = content[lang].heroTitle;
+  document.getElementById("hero-sub").innerHTML = content[lang].heroSub;
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 60px;
-  background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
+  document.getElementById("how-title").innerText = content[lang].howTitle;
+  document.getElementById("services-title").innerText = content[lang].servicesTitle;
+  document.getElementById("why-title").innerText = content[lang].whyTitle;
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #1E88E5;
-}
+  const howList = document.getElementById("how-list");
+  howList.innerHTML = "";
+  content[lang].howList.forEach(i => {
+    let li = document.createElement("li");
+    li.innerText = i;
+    howList.appendChild(li);
+  });
 
-.btn-primary {
-  background: #1E88E5;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-}
+  const servicesList = document.getElementById("services-list");
+  servicesList.innerHTML = "";
+  content[lang].servicesList.forEach(i => {
+    let li = document.createElement("li");
+    li.innerText = i;
+    servicesList.appendChild(li);
+  });
 
-.btn-primary.large {
-  padding: 14px 28px;
-  font-size: 16px;
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 80px 60px;
-}
-
-.hero-text h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.hero-text p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-.hero-img img {
-  max-width: 420px;
-}
-
-.features {
-  padding: 60px;
-  text-align: center;
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.card {
-  background: white;
-  padding: 30px;
-  width: 260px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-}
-
-.how {
-  background: white;
-  padding: 60px;
-  text-align: center;
-}
-
-.how ol {
-  margin-top: 20px;
-  font-size: 18px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  color: #64748B;
+  const whyList = document.getElementById("why-list");
+  whyList.innerHTML = "";
+  content[lang].whyList.forEach(i => {
+    let li = document.createElement("li");
+    li.innerText = i;
+    whyList.appendChild(li);
+  });
 }
