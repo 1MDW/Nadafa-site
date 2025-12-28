@@ -293,3 +293,50 @@ html[dir="rtl"] .btn-primary {
     font-size: 32px;
   }
 }
+
+/* =========================
+   RESERVATION FORM
+========================= */
+
+.reservation-section {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.reservation-form {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #CBD5E1;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 10px;
+}
