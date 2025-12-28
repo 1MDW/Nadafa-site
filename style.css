@@ -5,15 +5,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* =========================
+   ROOT COLORS
+========================= */
+:root {
+  --primary: #2563EB;
+  --primary-dark: #1E40AF;
+  --bg: #F8FAFC;
+  --text: #0F172A;
+  --muted: #64748B;
+  --white: #FFFFFF;
+  --whatsapp: #25D366;
+  --radius: 18px;
+  --shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
 /* =========================
    GLOBAL
 ========================= */
 body {
-  background: #F8FAFC;
-  color: #0F172A;
+  background: var(--bg);
+  color: var(--text);
 }
 
 a {
@@ -28,82 +43,103 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
-  background: white;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  padding: 22px 60px;
+  background: var(--white);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: #1E88E5;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary);
 }
 
 .lang-switch {
-  margin: 0 8px;
+  margin: 0 10px;
   cursor: pointer;
   font-weight: 600;
-  color: #1E88E5;
+  color: var(--primary);
 }
 
 .btn-primary {
-  background: #1E88E5;
+  background: var(--primary);
   color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
+  padding: 12px 26px;
+  border-radius: 999px;
   font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
 }
 
 /* =========================
-   HERO (HOME)
+   HERO
 ========================= */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 60px;
+  padding: 90px 60px;
+  gap: 40px;
 }
 
 .hero-text {
-  max-width: 480px;
+  max-width: 520px;
 }
 
 .hero-text h1 {
-  font-size: 46px;
+  font-size: 48px;
+  line-height: 1.15;
   margin-bottom: 20px;
 }
 
 .hero-text p {
   font-size: 18px;
-  margin-bottom: 30px;
-  color: #475569;
+  margin-bottom: 35px;
+  color: var(--muted);
 }
 
 .hero-img img {
-  max-width: 420px;
+  max-width: 460px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 /* =========================
-   FEATURES (HOME)
+   FEATURES
 ========================= */
 .features-section {
-  padding: 60px;
+  padding: 80px 60px;
   text-align: center;
+}
+
+.features-section h2 {
+  font-size: 34px;
 }
 
 .cards {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .card {
-  background: white;
-  padding: 30px;
-  width: 260px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  background: var(--white);
+  padding: 35px;
+  width: 280px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
 }
 
 /* =========================
@@ -113,83 +149,85 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px;
-  background: white;
+  padding: 90px 60px;
+  background: var(--white);
+  gap: 40px;
 }
 
 .service-img img {
-  max-width: 380px;
+  max-width: 420px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .service-text {
-  max-width: 420px;
+  max-width: 460px;
 }
 
 /* =========================
-   PAGE HEADER (TARIFS)
+   PAGE HEADER
 ========================= */
 .page-header {
   text-align: center;
-  padding: 50px 20px;
+  padding: 70px 20px 40px;
 }
 
 .page-header h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 40px;
 }
 
 /* =========================
    TARIFS
 ========================= */
 .tarifs {
-  max-width: 1100px;
+  max-width: 1150px;
   margin: auto;
-  padding: 20px;
+  padding: 40px 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
 }
 
 .tarif-card {
-  background: white;
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  background: var(--white);
+  padding: 35px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   transition: 0.3s;
 }
 
 .tarif-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
 }
 
 .tarif-card h3 {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .price {
-  font-size: 28px;
-  color: #1E88E5;
-  margin: 15px 0 25px;
+  font-size: 32px;
+  color: var(--primary);
+  margin: 20px 0 30px;
 }
 
 /* =========================
-   ICON + TEXT (FIX AR / FR)
+   ICON + TEXT
 ========================= */
 .icon-text {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
+  gap: 14px;
+  margin-bottom: 14px;
   font-size: 15px;
+  color: var(--muted);
 }
 
 .icon-text i {
-  color: #1E88E5;
+  color: var(--primary);
+  font-size: 17px;
   min-width: 22px;
-  font-size: 16px;
 }
 
-/* RTL AUTO */
 html[dir="rtl"] .icon-text {
   flex-direction: row-reverse;
 }
@@ -199,61 +237,96 @@ html[dir="rtl"] .icon-text {
 ========================= */
 .btn-group {
   display: flex;
-  gap: 10px;
-  margin-top: 25px;
+  gap: 12px;
+  margin-top: 30px;
 }
 
 .btn-reserver {
   flex: 1;
-  background: #1E88E5;
+  background: var(--primary);
   color: white;
-  padding: 12px;
-  border-radius: 10px;
+  padding: 14px;
+  border-radius: 12px;
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-.btn-whatsapp {
-  background: #25D366;
+.btn-whatsapp,
+.home-whatsapp {
+  background: var(--whatsapp);
   color: white;
-  padding: 12px 22px;
-  border-radius: 10px;
+  padding: 14px 24px;
+  border-radius: 12px;
   font-weight: 600;
-  display: inline-block;
-  text-align: center;
   transition: 0.3s;
 }
 
-.btn-whatsapp:hover {
+.btn-whatsapp:hover,
+.home-whatsapp:hover {
   background: #1EBE5D;
 }
 
-
 /* =========================
-   POPULAR CARD
+   POPULAR
 ========================= */
 .popular {
-  border: 2px solid #1E88E5;
+  border: 2px solid var(--primary);
+}
+
+/* =========================
+   RESERVATION FORM
+========================= */
+.reservation-section {
+  max-width: 620px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.reservation-form {
+  background: var(--white);
+  padding: 35px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #CBD5E1;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  min-height: 90px;
 }
 
 /* =========================
    FOOTER
 ========================= */
 footer {
-  background: #0d47a1;
+  background: #0B3C91;
   color: white;
   text-align: center;
-  padding: 30px 20px;
-  margin-top: 60px;
-}
-
-footer p {
+  padding: 35px 20px;
+  margin-top: 80px;
   font-size: 14px;
-  opacity: 0.9;
 }
 
 /* =========================
-   RTL SUPPORT
+   RTL
 ========================= */
 html[dir="rtl"] {
   direction: rtl;
@@ -264,11 +337,6 @@ html[dir="rtl"] .service-visual {
   flex-direction: row-reverse;
 }
 
-html[dir="rtl"] .btn-primary {
-  margin-right: 12px;
-  margin-left: 0;
-}
-
 /* =========================
    RESPONSIVE
 ========================= */
@@ -277,11 +345,6 @@ html[dir="rtl"] .btn-primary {
   .service-visual {
     flex-direction: column;
     text-align: center;
-  }
-
-  .hero-img img,
-  .service-img img {
-    margin-top: 30px;
   }
 
   .cards {
@@ -296,98 +359,6 @@ html[dir="rtl"] .btn-primary {
 
 @media (max-width: 600px) {
   .hero-text h1 {
-    font-size: 32px;
+    font-size: 34px;
   }
 }
-
-/* =========================
-   RESERVATION FORM
-========================= */
-
-.reservation-section {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-}
-
-.reservation-form {
-  background: white;
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-}
-
-.form-group {
-  margin-bottom: 18px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #CBD5E1;
-  font-size: 14px;
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 80px;
-}
-
-.full-width {
-  width: 100%;
-  margin-top: 10px;
-}
-/* =========================
-   RESERVATION BEAUTY
-========================= */
-
-.lang-box {
-  font-weight: 600;
-}
-
-.reservation-form label i {
-  color: #1E88E5;
-  margin-right: 8px;
-}
-
-html[dir="rtl"] .reservation-form label i {
-  margin-right: 0;
-  margin-left: 8px;
-}
-
-.secure-text {
-  margin-top: 15px;
-  font-size: 13px;
-  color: #64748B;
-  text-align: center;
-}
-
-.secure-text i {
-  color: #1E88E5;
-  margin-right: 6px;
-}
-
-html[dir="rtl"] .secure-text i {
-  margin-right: 0;
-  margin-left: 6px;
-}
-
-/* WhatsApp button - HOME only */
-.home-whatsapp {
-  background: #25D366;
-}
-
-.home-whatsapp:hover {
-  background: #1EBE5D;
-}
-
-
