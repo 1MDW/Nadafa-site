@@ -8,112 +8,132 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- ===== LANGUAGE SWITCH ===== -->
+<div class="lang-switch">
+  <button onclick="showFR()">FR</button>
+  <button onclick="showAR()">AR</button>
+</div>
+
 <!-- ================= FR ================= -->
-<header class="page-header">
-  <h1>Nos Tarifs</h1>
-  <p>Des prix clairs et transparents</p>
-</header>
+<section id="tarifs-fr">
 
-<section class="tarifs">
+  <header class="page-header">
+    <h1>Nos Tarifs</h1>
+    <p>Des prix clairs et transparents</p>
+  </header>
 
-  <!-- 2H -->
-  <div class="tarif-card">
-    <h3>2 Heures</h3>
-    <p class="price">120 DH</p>
+  <section class="tarifs">
 
-    <ul class="features">
-      <li class="icon-text"><i class="fa-solid fa-clock"></i><span>2 heures de ménage</span></li>
-      <li class="icon-text"><i class="fa-solid fa-house"></i><span>Nettoyage de base</span></li>
-      <li class="icon-text"><i class="fa-solid fa-user-check"></i><span>Femme de ménage vérifiée</span></li>
-    </ul>
+    <!-- 2H -->
+    <div class="tarif-card">
+      <h3>2 Heures</h3>
+      <p class="price">120 DH</p>
 
-    <button class="btn-reserver">Réserver</button>
-  </div>
+      <ul class="features">
+        <li class="icon-text"><i class="fa-solid fa-clock"></i><span>2 heures de ménage</span></li>
+        <li class="icon-text"><i class="fa-solid fa-house"></i><span>Nettoyage de base</span></li>
+        <li class="icon-text"><i class="fa-solid fa-user-check"></i><span>Femme de ménage vérifiée</span></li>
+      </ul>
 
-  <!-- 3H -->
-  <div class="tarif-card popular">
-    <h3>3 Heures</h3>
-    <p class="price">180 DH</p>
+      <div class="btn-group">
+        <a class="btn-reserver" href="reservation.html">Réserver</a>
+        <a class="btn-whatsapp"
+           href="https://wa.me/2126XXXXXXXX?text=Bonjour,%20je%20souhaite%20réserver%202%20heures%20de%20ménage%20avec%20Nadafa"
+           target="_blank">WhatsApp</a>
+      </div>
+    </div>
 
-    <ul class="features">
-      <li class="icon-text"><i class="fa-solid fa-clock"></i><span>3 heures de ménage</span></li>
-      <li class="icon-text"><i class="fa-solid fa-broom"></i><span>Nettoyage complet</span></li>
-      <li class="icon-text"><i class="fa-solid fa-star"></i><span>Offre la plus demandée</span></li>
-    </ul>
+    <!-- 3H -->
+    <div class="tarif-card popular">
+      <h3>3 Heures</h3>
+      <p class="price">180 DH</p>
 
-    <button class="btn-reserver">Réserver</button>
-  </div>
+      <ul class="features">
+        <li class="icon-text"><i class="fa-solid fa-clock"></i><span>3 heures de ménage</span></li>
+        <li class="icon-text"><i class="fa-solid fa-broom"></i><span>Nettoyage complet</span></li>
+        <li class="icon-text"><i class="fa-solid fa-star"></i><span>Offre la plus demandée</span></li>
+      </ul>
 
-  <!-- 4H -->
-  <div class="tarif-card">
-    <h3>4 Heures</h3>
-    <p class="price">220 DH</p>
+      <div class="btn-group">
+        <a class="btn-reserver" href="reservation.html">Réserver</a>
+        <a class="btn-whatsapp"
+           href="https://wa.me/2126XXXXXXXX?text=Bonjour,%20je%20souhaite%20réserver%203%20heures%20de%20ménage%20avec%20Nadafa"
+           target="_blank">WhatsApp</a>
+      </div>
+    </div>
 
-    <ul class="features">
-      <li class="icon-text"><i class="fa-solid fa-clock"></i><span>4 heures de ménage</span></li>
-      <li class="icon-text"><i class="fa-solid fa-soap"></i><span>Nettoyage en profondeur</span></li>
-      <li class="icon-text"><i class="fa-solid fa-thumbs-up"></i><span>Idéal grands logements</span></li>
-    </ul>
+    <!-- 4H -->
+    <div class="tarif-card">
+      <h3>4 Heures</h3>
+      <p class="price">220 DH</p>
 
-    <button class="btn-reserver">Réserver</button>
-  </div>
+      <ul class="features">
+        <li class="icon-text"><i class="fa-solid fa-clock"></i><span>4 heures de ménage</span></li>
+        <li class="icon-text"><i class="fa-solid fa-soap"></i><span>Nettoyage en profondeur</span></li>
+        <li class="icon-text"><i class="fa-solid fa-thumbs-up"></i><span>Idéal grands logements</span></li>
+      </ul>
 
+      <div class="btn-group">
+        <a class="btn-reserver" href="reservation.html">Réserver</a>
+        <a class="btn-whatsapp"
+           href="https://wa.me/2126XXXXXXXX?text=Bonjour,%20je%20souhaite%20réserver%204%20heures%20de%20ménage%20avec%20Nadafa"
+           target="_blank">WhatsApp</a>
+      </div>
+    </div>
+
+  </section>
 </section>
 
 <!-- ================= AR ================= -->
-<section class="tarifs rtl" dir="rtl">
+<section id="tarifs-ar" class="rtl" dir="rtl" style="display:none;">
 
-  <h2 class="section-title">الأسعار</h2>
+  <header class="page-header">
+    <h1>الأسعار</h1>
+    <p>أثمنة واضحة وبدون التزام</p>
+  </header>
 
-  <!-- 2H -->
-  <div class="tarif-card">
-    <h3>ساعتان</h3>
-    <p class="price">120 درهم</p>
+  <section class="tarifs">
 
-    <ul class="features">
-      <li class="icon-text"><i class="fa-solid fa-clock"></i><span>ساعتان من التنظيف</span></li>
-      <li class="icon-text"><i class="fa-solid fa-house"></i><span>تنظيف أساسي</span></li>
-      <li class="icon-text"><i class="fa-solid fa-user-check"></i><span>عاملة منزل موثوقة</span></li>
-    </ul>
+    <div class="tarif-card">
+      <h3>ساعتان</h3>
+      <p class="price">120 درهم</p>
 
-    <button class="btn-reserver">احجز الآن</button>
-  </div>
+      <ul class="features">
+        <li class="icon-text"><i class="fa-solid fa-clock"></i><span>ساعتان من التنظيف</span></li>
+        <li class="icon-text"><i class="fa-solid fa-house"></i><span>تنظيف أساسي</span></li>
+        <li class="icon-text"><i class="fa-solid fa-user-check"></i><span>عاملة منزل موثوقة</span></li>
+      </ul>
 
-  <!-- 3H -->
-  <div class="tarif-card popular">
-    <h3>ثلاث ساعات</h3>
-    <p class="price">180 درهم</p>
+      <div class="btn-group">
+        <a class="btn-reserver" href="reservation.html">احجز عبر الموقع</a>
+        <a class="btn-whatsapp"
+           href="https://wa.me/2126XXXXXXXX?text=السلام%20عليكم،%20بغيت%20نحجز%20خدمة%20تنظيف%20لمدة%20ساعتين%20مع%20Nadafa"
+           target="_blank">واتساب</a>
+      </div>
+    </div>
 
-    <ul class="features">
-      <li class="icon-text"><i class="fa-solid fa-clock"></i><span>ثلاث ساعات من التنظيف</span></li>
-      <li class="icon-text"><i class="fa-solid fa-broom"></i><span>تنظيف كامل</span></li>
-      <li class="icon-text"><i class="fa-solid fa-star"></i><span>العرض الأكثر طلباً</span></li>
-    </ul>
-
-    <button class="btn-reserver">احجز الآن</button>
-  </div>
-
-  <!-- 4H -->
-  <div class="tarif-card">
-    <h3>أربع ساعات</h3>
-    <p class="price">220 درهم</p>
-
-    <ul class="features">
-      <li class="icon-text"><i class="fa-solid fa-clock"></i><span>أربع ساعات من التنظيف</span></li>
-      <li class="icon-text"><i class="fa-solid fa-soap"></i><span>تنظيف عميق</span></li>
-      <li class="icon-text"><i class="fa-solid fa-thumbs-up"></i><span>مناسب للمنازل الكبيرة</span></li>
-    </ul>
-
-    <button class="btn-reserver">احجز الآن</button>
-  </div>
-
+  </section>
 </section>
+
+<!-- ===== JS ===== -->
+<script>
+  function showFR() {
+    document.getElementById("tarifs-fr").style.display = "block";
+    document.getElementById("tarifs-ar").style.display = "none";
+    document.documentElement.lang = "fr";
+  }
+
+  function showAR() {
+    document.getElementById("tarifs-fr").style.display = "none";
+    document.getElementById("tarifs-ar").style.display = "block";
+    document.documentElement.lang = "ar";
+  }
+</script>
 
 </body>
 </html>
