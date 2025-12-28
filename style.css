@@ -1,4 +1,7 @@
-/* RESET */
+/* =========================
+   GLOBAL
+========================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,202 +9,147 @@
   font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
-/* GLOBAL */
 body {
-  background: #F8FAFC;
-  color: #0F172A;
+  background-color: #f6f8fb;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  background: white;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: #1E88E5;
-}
-
-.lang-switch {
-  margin: 0 8px;
-  cursor: pointer;
-  color: #1E88E5;
-}
-
-.btn-primary {
-  background: #1E88E5;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
+a {
   text-decoration: none;
-  font-weight: 600;
-  margin-left: 12px;
+  color: inherit;
 }
 
-/* HERO */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 80px 60px;
+/* =========================
+   HEADER / HERO
+========================= */
+
+header {
+  background: linear-gradient(135deg, #1E88E5, #42A5F5);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
 }
 
-.hero-text {
-  max-width: 480px;
+header h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
 }
 
-.hero-text h1 {
-  font-size: 46px;
+header p {
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  padding: 60px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 50px;
+}
+
+/* =========================
+   FEATURES / SERVICES
+========================= */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+}
+
+.feature-card i {
+  font-size: 40px;
+  color: #1E88E5;
   margin-bottom: 20px;
 }
 
-.hero-text p {
-  font-size: 18px;
-  margin-bottom: 30px;
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
-.hero-img img {
-  max-width: 420px;
+/* =========================
+   IMAGES SECTIONS
+========================= */
+
+.image-section {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
-/* FEATURES */
-.features {
-  padding: 60px;
-  text-align: center;
+.image-section img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.card {
-  background: white;
-  padding: 30px;
-  width: 260px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
-.features h1 {
-  font-size: 38px;
-  margin-bottom: 40px;
-}
-
-
-/* SERVICE VISUAL */
-.service-visual {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px;
-  background: white;
-}
-
-.service-img img {
-  max-width: 380px;
-}
-
-.service-text {
-  max-width: 420px;
-}
-
-/* TRUST */
-.trust {
-  text-align: center;
-  padding: 60px;
-}
-
-.trust img {
-  max-width: 320px;
-  margin-top: 20px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  color: #64748B;
-}
-
-/* RTL SUPPORT */
-html[dir="rtl"] {
-  direction: rtl;
-}
-
-html[dir="rtl"] .hero,
-html[dir="rtl"] .service-visual {
-  flex-direction: row-reverse;
-}
-
-html[dir="rtl"] .btn-primary {
-  margin-left: 0;
-  margin-right: 12px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .hero,
-  .service-visual {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-img img,
-  .service-img img {
-    margin-top: 30px;
-  }
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar {
-    padding: 20px;
-  }
-}
-
-/* ===== TARIFS PAGE ===== */
+/* =========================
+   TARIFS PAGE
+========================= */
 
 .page-header {
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
 
 .page-header h1 {
-  font-size: 32px;
+  font-size: 36px;
   margin-bottom: 10px;
+}
+
+.page-header p {
+  font-size: 18px;
+  color: #666;
 }
 
 .tarifs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  padding: 40px 20px;
+  gap: 30px;
   max-width: 1100px;
   margin: auto;
 }
 
 .tarif-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 25px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  background: white;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tarif-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 22px 40px rgba(0,0,0,0.15);
 }
 
 .tarif-card h3 {
@@ -210,21 +158,23 @@ html[dir="rtl"] .btn-primary {
 }
 
 .price {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bold;
   color: #1E88E5;
-  margin-bottom: 20px;
-}
-
-/* ===== FEATURES ===== */
-.features {
-  list-style: none;
-  padding: 0;
   margin-bottom: 25px;
 }
 
-.features li {
-  margin-bottom: 12px;
+/* ===== FEATURES LIST (ICONS FIXED) ===== */
+
+.tarif-card .features {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.tarif-card .features li {
+  margin-bottom: 14px;
 }
 
 .icon-text {
@@ -236,33 +186,63 @@ html[dir="rtl"] .btn-primary {
 .icon-text i {
   color: #1E88E5;
   font-size: 16px;
-  min-width: 20px;
+  min-width: 22px;
 }
 
-/* ===== RTL FIX ===== */
+/* =========================
+   RTL (ARABIC)
+========================= */
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
 .rtl .icon-text {
   flex-direction: row-reverse;
 }
 
-/* ===== BUTTON ===== */
+/* =========================
+   BUTTONS
+========================= */
+
 .btn-reserver {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   background: #1E88E5;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 16px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .btn-reserver:hover {
   background: #1565C0;
 }
 
-/* ===== POPULAR CARD ===== */
+/* =========================
+   POPULAR CARD
+========================= */
+
 .popular {
   border: 2px solid #1E88E5;
 }
 
+/* =========================
+   FOOTER
+========================= */
 
+footer {
+  background: #0d47a1;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 60px;
+}
+
+footer p {
+  font-size: 14px;
+  opacity: 0.9;
+}
