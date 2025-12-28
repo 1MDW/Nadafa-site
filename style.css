@@ -1,7 +1,6 @@
 /* =========================
-   RESET & GLOBAL
+   RESET
 ========================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +8,12 @@
   font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
+/* =========================
+   GLOBAL
+========================= */
 body {
-  background: #f6f8fb;
-  color: #333;
-  line-height: 1.6;
+  background: #F8FAFC;
+  color: #0F172A;
 }
 
 a {
@@ -21,151 +22,112 @@ a {
 }
 
 /* =========================
-   LANGUAGE SWITCH
+   NAVBAR
 ========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: white;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1E88E5;
+}
 
 .lang-switch {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 20px;
-}
-
-.lang-switch button {
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: 1px solid #1E88E5;
-  background: white;
-  color: #1E88E5;
+  margin: 0 8px;
   cursor: pointer;
-  font-weight: 500;
-}
-
-.lang-switch button:hover {
-  background: #1E88E5;
-  color: white;
-}
-
-/* =========================
-   HERO / HEADER (MAIN PAGE)
-========================= */
-
-header.hero {
-  background: linear-gradient(135deg, #1E88E5, #42A5F5);
-  color: white;
-  text-align: center;
-  padding: 90px 20px;
-}
-
-header.hero h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-}
-
-header.hero p {
-  font-size: 18px;
-  opacity: 0.95;
-}
-
-.hero-buttons {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.hero-buttons a {
-  padding: 14px 26px;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
+  color: #1E88E5;
 }
 
 .btn-primary {
-  background: white;
-  color: #1E88E5;
-}
-
-.btn-secondary {
-  background: transparent;
-  border: 2px solid white;
+  background: #1E88E5;
   color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
 }
 
 /* =========================
-   SECTIONS
+   HERO (HOME)
 ========================= */
-
-section {
-  padding: 70px 20px;
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 60px;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 34px;
-  margin-bottom: 50px;
+.hero-text {
+  max-width: 480px;
 }
 
-/* =========================
-   FEATURES (MAIN PAGE)
-========================= */
-
-.features-grid {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.feature-card {
-  background: white;
-  border-radius: 16px;
-  padding: 30px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.feature-card:hover {
-  transform: translateY(-8px);
-}
-
-.feature-card i {
-  font-size: 38px;
-  color: #1E88E5;
+.hero-text h1 {
+  font-size: 46px;
   margin-bottom: 20px;
 }
 
-.feature-card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #475569;
+}
+
+.hero-img img {
+  max-width: 420px;
 }
 
 /* =========================
-   IMAGE SECTIONS
+   FEATURES (HOME)
 ========================= */
-
-.image-section {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+.features-section {
+  padding: 60px;
+  text-align: center;
 }
 
-.image-section img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  width: 260px;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+/* =========================
+   SERVICE VISUAL
+========================= */
+.service-visual {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  background: white;
+}
+
+.service-img img {
+  max-width: 380px;
+}
+
+.service-text {
+  max-width: 420px;
 }
 
 /* =========================
    PAGE HEADER (TARIFS)
 ========================= */
-
 .page-header {
   text-align: center;
   padding: 50px 20px;
@@ -179,10 +141,10 @@ section {
 /* =========================
    TARIFS
 ========================= */
-
 .tarifs {
   max-width: 1100px;
   margin: auto;
+  padding: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
@@ -197,7 +159,7 @@ section {
 }
 
 .tarif-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
 }
 
 .tarif-card h3 {
@@ -211,33 +173,34 @@ section {
 }
 
 /* =========================
-   FEATURES LIST (ICONS)
+   ICON + TEXT (FIX AR / FR)
 ========================= */
-
-.features {
-  list-style: none;
-  margin-bottom: 25px;
-}
-
 .icon-text {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 12px;
+  font-size: 15px;
 }
 
 .icon-text i {
   color: #1E88E5;
   min-width: 22px;
+  font-size: 16px;
+}
+
+/* RTL AUTO */
+html[dir="rtl"] .icon-text {
+  flex-direction: row-reverse;
 }
 
 /* =========================
    BUTTONS
 ========================= */
-
 .btn-group {
   display: flex;
   gap: 10px;
+  margin-top: 25px;
 }
 
 .btn-reserver {
@@ -263,28 +226,13 @@ section {
 /* =========================
    POPULAR CARD
 ========================= */
-
 .popular {
   border: 2px solid #1E88E5;
 }
 
 /* =========================
-   RTL (ARABIC)
-========================= */
-
-.rtl {
-  direction: rtl;
-  text-align: right;
-}
-
-.rtl .icon-text {
-  flex-direction: row-reverse;
-}
-
-/* =========================
    FOOTER
 ========================= */
-
 footer {
   background: #0d47a1;
   color: white;
@@ -299,15 +247,49 @@ footer p {
 }
 
 /* =========================
+   RTL SUPPORT
+========================= */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="rtl"] .hero,
+html[dir="rtl"] .service-visual {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .btn-primary {
+  margin-right: 12px;
+  margin-left: 0;
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
-
-@media (max-width: 600px) {
-  header.hero h1 {
-    font-size: 32px;
+@media (max-width: 900px) {
+  .hero,
+  .service-visual {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .section-title {
-    font-size: 28px;
+  .hero-img img,
+  .service-img img {
+    margin-top: 30px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 32px;
   }
 }
