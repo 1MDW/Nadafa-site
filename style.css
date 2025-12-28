@@ -1,128 +1,396 @@
+
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
 }
 
+/* =========================
+   ROOT COLORS
+========================= */
+:root {
+  --primary: #2563EB;
+  --primary-dark: #1E40AF;
+  --bg: #F8FAFC;
+  --text: #0F172A;
+  --muted: #64748B;
+  --white: #FFFFFF;
+  --whatsapp: #25D366;
+  --radius: 18px;
+  --shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   GLOBAL
+========================= */
 body {
-  background: #F8FAFC;
-  color: #0F172A;
+  background: var(--bg);
+  color: var(--text);
 }
 
-a { text-decoration: none; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
-  background: white;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  padding: 22px 60px;
+  background: var(--white);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: #1E88E5;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary);
 }
 
+.lang-switch {
+  margin: 0 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+/* =========================
+   NAVBAR LINKS (TARIFS FIX)
+========================= */
 .nav-links {
   display: flex;
-  gap: 15px;
   align-items: center;
+  gap: 25px;
 }
 
 .nav-link {
   font-weight: 600;
+  color: var(--text);
+  position: relative;
 }
 
-.btn-primary {
-  background: #1E88E5;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--primary);
+  transition: 0.3s;
+  border-radius: 4px;
 }
 
-.btn-whatsapp {
-  background: #25D366;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
+.nav-link:hover::after {
+  width: 100%;
 }
 
-.lang-switch {
-  cursor: pointer;
-  font-weight: 600;
-  color: #1E88E5;
-}
-
+/* =========================
+   HERO
+========================= */
 .hero {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 80px 60px;
+  padding: 90px 60px;
+  gap: 40px;
 }
 
-.hero-img img { max-width: 420px; }
+.hero-text {
+  max-width: 520px;
+}
 
+.hero-text h1 {
+  font-size: 48px;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 35px;
+  color: var(--muted);
+}
+
+.hero-img img {
+  max-width: 460px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* =========================
+   FEATURES
+========================= */
+.features-section {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 34px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.card {
+  background: var(--white);
+  padding: 35px;
+  width: 280px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* =========================
+   SERVICE VISUAL
+========================= */
+.service-visual {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 90px 60px;
+  background: var(--white);
+  gap: 40px;
+}
+
+.service-img img {
+  max-width: 420px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.service-text {
+  max-width: 460px;
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
 .page-header {
   text-align: center;
-  padding: 50px;
+  padding: 70px 20px 40px;
 }
 
+.page-header h1 {
+  font-size: 40px;
+}
+
+/* =========================
+   TARIFS
+========================= */
 .tarifs {
-  max-width: 1100px;
+  max-width: 1150px;
   margin: auto;
+  padding: 40px 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
 }
 
 .tarif-card {
-  background: white;
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  background: var(--white);
+  padding: 35px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: 0.3s;
 }
 
+.tarif-card:hover {
+  transform: translateY(-10px);
+}
+
+.tarif-card h3 {
+  font-size: 24px;
+}
+
+.price {
+  font-size: 32px;
+  color: var(--primary);
+  margin: 20px 0 30px;
+}
+
+/* =========================
+   ICON + TEXT
+========================= */
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.icon-text i {
+  color: var(--primary);
+  font-size: 17px;
+  min-width: 22px;
+}
+
+html[dir="rtl"] .icon-text {
+  flex-direction: row-reverse;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.btn-reserver {
+  flex: 1;
+  background: var(--primary);
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.btn-whatsapp,
+.home-whatsapp {
+  background: var(--whatsapp);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover,
+.home-whatsapp:hover {
+  background: #1EBE5D;
+}
+
+/* =========================
+   POPULAR
+========================= */
 .popular {
-  border: 2px solid #1E88E5;
+  border: 2px solid var(--primary);
 }
 
+/* =========================
+   RESERVATION FORM
+========================= */
 .reservation-section {
-  max-width: 600px;
+  max-width: 620px;
   margin: auto;
-  padding: 40px;
+  padding: 40px 20px;
 }
 
 .reservation-form {
-  background: white;
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  background: var(--white);
+  padding: 35px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-.full-width {
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
   width: 100%;
-  margin-top: 10px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #CBD5E1;
+  font-size: 14px;
 }
 
+.form-group textarea {
+  min-height: 90px;
+}
+
+/* =========================
+   FOOTER
+========================= */
 footer {
-  background: #0d47a1;
+  background: #0B3C91;
   color: white;
   text-align: center;
-  padding: 25px;
-  margin-top: 60px;
+  padding: 35px 20px;
+  margin-top: 80px;
+  font-size: 14px;
 }
 
+/* =========================
+   RTL
+========================= */
 html[dir="rtl"] {
   direction: rtl;
 }
 
-html[dir="rtl"] .nav-links {
+html[dir="rtl"] .hero,
+html[dir="rtl"] .service-visual {
   flex-direction: row-reverse;
 }
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .hero,
+  .service-visual {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 34px;
+  }
+}
+
