@@ -2,12 +2,17 @@
 <html lang="fr" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <title>Nadafa – Accueil</title>
+  <title>Nadafa – Service de Nettoyage</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <header class="navbar">
   <div class="logo">Nadafa</div>
 
@@ -15,7 +20,9 @@
     <a href="index.html" class="nav-link">Accueil</a>
     <a href="tarifs.html" class="nav-link">Tarifs</a>
     <a href="reservation.html" class="btn-primary">Réserver</a>
-    <a href="https://wa.me/212600000000" target="_blank" class="btn-whatsapp">WhatsApp</a>
+    <a href="https://wa.me/212600000000" target="_blank" class="btn-whatsapp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
   </nav>
 
   <div class="lang-box">
@@ -24,26 +31,99 @@
   </div>
 </header>
 
-<section class="hero">
-  <div class="hero-text">
-    <h1>Service de ménage professionnel</h1>
-    <p>Réservez facilement votre service de nettoyage à domicile.</p>
-    <a href="reservation.html" class="btn-primary">Réserver maintenant</a>
+<!-- ================= HERO ================= -->
+<section class="hero-pro">
+  <div class="hero-content">
+    <h1 data-fr="Service de nettoyage professionnel"
+        data-ar="خدمة تنظيف احترافية">
+      Service de nettoyage professionnel
+    </h1>
+
+    <p data-fr="Nous offrons des services de ménage fiables pour maisons et bureaux."
+       data-ar="نقدم خدمات تنظيف موثوقة للمنازل والمكاتب.">
+      Nous offrons des services de ménage fiables pour maisons et bureaux.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="reservation.html" class="btn-primary">
+        Réserver maintenant
+      </a>
+
+      <a href="https://wa.me/212600000000" target="_blank" class="btn-whatsapp home-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+        Réserver via WhatsApp
+      </a>
+    </div>
   </div>
 
-  <div class="hero-img">
-    <img src="img/home.png" alt="Ménage">
+  <!-- 3 IMAGES -->
+  <div class="hero-images">
+    <img src="img/trust-cleaning.jpg" alt="Nettoyage maison">
+    <img src="img/service-cleaning.jpg" alt="Nettoyage salon">
+    <img src="img/hero-cleaning.jpg" alt="Nettoyage bureau">
   </div>
 </section>
 
+<!-- ================= FEATURES ================= -->
+<section class="features-section">
+  <h2 data-fr="Pourquoi nous choisir ?"
+      data-ar="لماذا تختارنا؟">
+    Pourquoi nous choisir ?
+  </h2>
+
+  <div class="cards">
+    <div class="card">
+      <i class="fa fa-user-check fa-2x"></i>
+      <h3 data-fr="Professionnel"
+          data-ar="احترافي">
+        Professionnel
+      </h3>
+      <p data-fr="Personnel qualifié et expérimenté"
+         data-ar="طاقم مؤهل وذو خبرة">
+        Personnel qualifié et expérimenté
+      </p>
+    </div>
+
+    <div class="card">
+      <i class="fa fa-clock fa-2x"></i>
+      <h3 data-fr="Ponctuel"
+          data-ar="في الوقت">
+        Ponctuel
+      </h3>
+      <p data-fr="Respect total des horaires"
+         data-ar="الالتزام التام بالمواعيد">
+        Respect total des horaires
+      </p>
+    </div>
+
+    <div class="card">
+      <i class="fa fa-star fa-2x"></i>
+      <h3 data-fr="Qualité"
+          data-ar="جودة">
+        Qualité
+      </h3>
+      <p data-fr="Résultat propre et garanti"
+         data-ar="نتائج نظيفة ومضمونة">
+        Résultat propre et garanti
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer>
   <p>© 2025 Nadafa – Tous droits réservés</p>
 </footer>
 
+<!-- ================= LANGUAGE SCRIPT ================= -->
 <script>
 function setLang(lang) {
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+  document.querySelectorAll('[data-fr]').forEach(el => {
+    el.textContent = el.getAttribute(`data-${lang}`);
+  });
 }
 </script>
 
