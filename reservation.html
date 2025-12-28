@@ -1,60 +1,122 @@
+
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <title>Nadafa – Réservation</title>
+  <title>Réservation | Nadafa</title>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<header class="navbar">
+<!-- NAVBAR -->
+<div class="navbar">
   <div class="logo">Nadafa</div>
 
-  <nav class="nav-links">
-    <a href="index.html" class="nav-link">Accueil</a>
-    <a href="tarifs.html" class="nav-link">Tarifs</a>
-    <a href="reservation.html" class="btn-primary">Réserver</a>
-    <a href="https://wa.me/212600000000" target="_blank" class="btn-whatsapp">WhatsApp</a>
-  </nav>
-
   <div class="lang-box">
-    <span class="lang-switch" onclick="setLang('fr')">FR</span> |
-    <span class="lang-switch" onclick="setLang('ar')">AR</span>
+    <span class="lang-switch" onclick="setLanguage('fr')">FR</span>
+    <span>|</span>
+    <span class="lang-switch" onclick="setLanguage('ar')">AR</span>
   </div>
-</header>
+</div>
 
+<!-- HEADER -->
+<section class="page-header">
+  <h1 id="title">Réserver un service</h1>
+  <p id="subtitle">Simple, rapide et sécurisé</p>
+</section>
+
+<!-- FORM CARD -->
 <section class="reservation-section">
   <form class="reservation-form">
-    <h2>Réservation</h2>
 
     <div class="form-group">
-      <label>Nom</label>
-      <input type="text">
+      <label id="nameLabel"><i class="fa-solid fa-user"></i> Nom complet</label>
+      <input type="text" placeholder="Votre nom" required>
     </div>
 
     <div class="form-group">
-      <label>Téléphone</label>
-      <input type="text">
+      <label id="phoneLabel"><i class="fa-solid fa-phone"></i> Téléphone</label>
+      <input type="tel" placeholder="06XXXXXXXX" required>
     </div>
 
     <div class="form-group">
-      <label>Date</label>
-      <input type="date">
+      <label id="cityLabel"><i class="fa-solid fa-location-dot"></i> Ville</label>
+      <input type="text" placeholder="Béni Mellal" required>
     </div>
 
-    <button class="btn-primary full-width">Envoyer</button>
+    <div class="form-group">
+      <label id="serviceLabel"><i class="fa-solid fa-clock"></i> Durée du service</label>
+      <select>
+        <option>2 heures – 120 DH</option>
+        <option>3 heures – 170 DH</option>
+        <option>4 heures – 220 DH</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label id="dateLabel"><i class="fa-solid fa-calendar"></i> Date souhaitée</label>
+      <input type="date" required>
+    </div>
+
+    <div class="form-group">
+      <label id="noteLabel"><i class="fa-solid fa-message"></i> Remarque</label>
+      <textarea placeholder="Informations supplémentaires (optionnel)"></textarea>
+    </div>
+
+    <button class="btn-primary full-width" id="submitBtn">
+      Confirmer la réservation
+    </button>
+
+    <p class="secure-text">
+      <i class="fa-solid fa-shield-halved"></i>
+      <span id="secureText">Vos informations sont confidentielles</span>
+    </p>
+
   </form>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>© 2025 Nadafa – Tous droits réservés</p>
 </footer>
 
+<!-- LANGUAGE SCRIPT -->
 <script>
-function setLang(lang) {
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+function setLanguage(lang) {
+  if (lang === "ar") {
+    document.documentElement.lang = "ar";
+    document.documentElement.dir = "rtl";
+
+    title.innerText = "حجز خدمة";
+    subtitle.innerText = "سهل، سريع وآمن";
+
+    nameLabel.innerHTML = '<i class="fa-solid fa-user"></i> الاسم الكامل';
+    phoneLabel.innerHTML = '<i class="fa-solid fa-phone"></i> رقم الهاتف';
+    cityLabel.innerHTML = '<i class="fa-solid fa-location-dot"></i> المدينة';
+    serviceLabel.innerHTML = '<i class="fa-solid fa-clock"></i> مدة الخدمة';
+    dateLabel.innerHTML = '<i class="fa-solid fa-calendar"></i> التاريخ المطلوب';
+    noteLabel.innerHTML = '<i class="fa-solid fa-message"></i> ملاحظات';
+    submitBtn.innerText = "تأكيد الحجز";
+    secureText.innerText = "معلوماتك محمية ولن يتم مشاركتها";
+
+  } else {
+    document.documentElement.lang = "fr";
+    document.documentElement.dir = "ltr";
+
+    title.innerText = "Réserver un service";
+    subtitle.innerText = "Simple, rapide et sécurisé";
+
+    nameLabel.innerHTML = '<i class="fa-solid fa-user"></i> Nom complet';
+    phoneLabel.innerHTML = '<i class="fa-solid fa-phone"></i> Téléphone';
+    cityLabel.innerHTML = '<i class="fa-solid fa-location-dot"></i> Ville';
+    serviceLabel.innerHTML = '<i class="fa-solid fa-clock"></i> Durée du service';
+    dateLabel.innerHTML = '<i class="fa-solid fa-calendar"></i> Date souhaitée';
+    noteLabel.innerHTML = '<i class="fa-solid fa-message"></i> Remarque';
+    submitBtn.innerText = "Confirmer la réservation";
+    secureText.innerText = "Vos informations sont confidentielles";
+  }
 }
 </script>
 
