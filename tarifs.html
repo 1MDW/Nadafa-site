@@ -24,7 +24,7 @@
 </header>
 
 <!-- ================= FR ================= -->
-<section id="tarifs-fr">
+<section id="tarifs-fr" style="display:none;">
 
   <header class="page-header">
     <h1>Nos Tarifs</h1>
@@ -88,7 +88,7 @@
 </section>
 
 <!-- ================= AR ================= -->
-<section id="tarifs-ar" class="rtl" dir="rtl" style="display:none;">
+<section id="tarifs-ar" dir="rtl">
 
   <header class="page-header">
     <h1>الأسعار</h1>
@@ -159,6 +159,9 @@
     document.getElementById("tarifs-ar").style.display = "block";
     document.documentElement.lang = "ar";
   }
+</script>
+<script>
+  showAR();
 </script>
 
 </body>
