@@ -90,6 +90,11 @@ body {
   border-radius: 14px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
+.features h1 {
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
 
 /* SERVICE VISUAL */
 .service-visual {
@@ -164,3 +169,4 @@ html[dir="rtl"] .btn-primary {
     padding: 20px;
   }
 }
+
