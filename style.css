@@ -214,14 +214,20 @@ html[dir="rtl"] .icon-text {
 }
 
 .btn-whatsapp {
-  flex: 1;
   background: #25D366;
   color: white;
-  padding: 12px;
+  padding: 12px 22px;
   border-radius: 10px;
+  font-weight: 600;
+  display: inline-block;
   text-align: center;
-  font-weight: 500;
+  transition: 0.3s;
 }
+
+.btn-whatsapp:hover {
+  background: #1EBE5D;
+}
+
 
 /* =========================
    POPULAR CARD
@@ -374,4 +380,5 @@ html[dir="rtl"] .secure-text i {
   margin-right: 0;
   margin-left: 6px;
 }
+
 
