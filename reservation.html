@@ -40,7 +40,7 @@
       <label id="nameLabel">
         <i class="fa-solid fa-user"></i> الاسم الكامل
       </label>
-      <input type="text" placeholder="الاسم الكامل" required>
+      <input type="text" placeholder="nom complet-الاسم الكامل" required>
     </div>
 
     <div class="form-group">
@@ -52,9 +52,8 @@
 
     <!-- VILLE -->
     <div class="form-group">
-      <label>
-        <span class="lang-fr">Ville</span>
-        <span class="lang-ar">المدينة</span>
+     <label id="cityLabel">
+        <i class="fa-solid fa-location-dot"></i> المدينة
       </label>
 
       <select required>
@@ -68,9 +67,8 @@
 
     <!-- QUARTIER -->
     <div class="form-group">
-      <label>
-        <span class="lang-fr">Quartier</span>
-        <span class="lang-ar">الحي</span>
+      <label id="hayLabel">
+        <i class="fa-solid fa-house"></i> الحي
       </label>
       <input type="text" placeholder="Ex: Maarif, Agdal, Guéliz">
     </div>
@@ -129,6 +127,8 @@ function setLanguage(lang) {
 
     nameLabel.innerHTML = '<i class="fa-solid fa-user"></i> الاسم الكامل';
     phoneLabel.innerHTML = '<i class="fa-solid fa-phone"></i> رقم الهاتف';
+    cityLabel.innerHTML = '<i class="fa-solid fa-location-dot"></i> المدينة';
+    hayLabel.innerHTML = '<i class="fa-solid fa-house"></i> الحي';
     serviceLabel.innerHTML = '<i class="fa-solid fa-clock"></i> مدة الخدمة';
     dateLabel.innerHTML = '<i class="fa-solid fa-calendar"></i> التاريخ المطلوب';
     noteLabel.innerHTML = '<i class="fa-solid fa-message"></i> ملاحظات';
@@ -144,6 +144,8 @@ function setLanguage(lang) {
 
     nameLabel.innerHTML = '<i class="fa-solid fa-user"></i> Nom complet';
     phoneLabel.innerHTML = '<i class="fa-solid fa-phone"></i> Téléphone';
+    cityLabel.innerHTML = '<i class="fa-solid fa-location-dot"></i> Ville';
+    hayLabel.innerHTML = '<i class="fa-solid fa-house"></i> Quartier';
     serviceLabel.innerHTML = '<i class="fa-solid fa-clock"></i> Durée du service';
     dateLabel.innerHTML = '<i class="fa-solid fa-calendar"></i> Date souhaitée';
     noteLabel.innerHTML = '<i class="fa-solid fa-message"></i> Remarque';
