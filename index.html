@@ -5,18 +5,6 @@
   <title>Nadafa – Service de ménage à domicile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    .lang-ar { display: block; direction: rtl; text-align: right; }
-    .lang-fr { display: none; }
-
-
-    .lang-switch {
-      cursor: pointer;
-      font-weight: 600;
-      margin-left: 20px;
-    }
-  </style>
 </head>
 
 <body>
@@ -24,58 +12,77 @@
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="logo">Nadafa</div>
-  <div>
+
+  <nav class="nav-actions">
+    <a href="index.html" class="nav-link lang-ar">الرئيسية</a>
+    <a href="index.html" class="nav-link lang-fr">Accueil</a>
+
+    <a href="tarifs.html" class="nav-link lang-ar">الأسعار</a>
+    <a href="tarifs.html" class="nav-link lang-fr">Tarifs</a>
+
     <span class="lang-switch" onclick="switchLang('fr')">FR</span>
-    |
+    <span class="separator">|</span>
     <span class="lang-switch" onclick="switchLang('ar')">AR</span>
-    <a href="tarifs.html" class="btn-primary" style="margin-right:10px">
-  Tarifs
-</a>
 
-   <a
-  href="https://wa.me/2126XXXXXXXX?text=Bonjour,%20je%20souhaite%20réserver%20un%20service%20de%20ménage%20avec%20Nadafa"
-  target="_blank"
-  class="btn-whatsapp home-whatsapp"
-  id="whatsappBtnHome"
->
-  Réserver via WhatsApp
-</a>
-
-  </div>
+    <a
+      href="https://wa.me/2126XXXXXXXX?text=مرحبا،%20بغيت%20نحجز%20خدمة%20نظافة%20مع%20Nadafa"
+      target="_blank"
+      class="btn-whatsapp"
+    >
+      <span class="lang-ar">احجز عبر واتساب</span>
+      <span class="lang-fr">Réserver via WhatsApp</span>
+    </a>
+  </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-content">
 
-  <!-- FR -->
-  <div class="hero-text lang-fr">
-    <h1>Le ménage, sans stress.</h1>
-    <p>Réservez une femme de ménage fiable en quelques clics.</p>
-    <a href="reservation.html" class="btn-primary" id="heroReserveBtn">
-  Réserver maintenant
-</a>
+    <div class="hero-text lang-ar">
+      <h1>النظافة بلا تعب ولا قلق</h1>
+      <p>احجز عاملة نظافة موثوقة بكل سهولة.</p>
+      <div class="hero-buttons">
+        <a href="reservation.html" class="btn-primary">احجز الآن</a>
+      </div>
+    </div>
+
+    <div class="hero-text lang-fr">
+      <h1>Le ménage, sans stress.</h1>
+      <p>Réservez une femme de ménage fiable en quelques clics.</p>
+      <div class="hero-buttons">
+        <a href="reservation.html" class="btn-primary">Réserver maintenant</a>
+      </div>
+    </div>
+
+    <div class="hero-img">
+      <img src="clean1.png" alt="Service de ménage professionnel">
+    </div>
 
   </div>
-
-  <!-- AR -->
-  <div class="hero-text lang-ar">
-    <h1>النظافة بلا تعب ولا قلق</h1>
-    <p>احجز عاملة نظافة موثوقة بكل سهولة.</p>
-    <a href="reservation.html" class="btn-primary" id="heroReserveBtn">
-      احجز الآن
-    </a>
-  </div>
-
-  <div class="hero-img">
-    <img src="clean1.png" alt="Service de ménage professionnel">
-  </div>
-
 </section>
 
 <!-- FEATURES -->
 <section class="features">
 
-  <!-- FR -->
+  <div class="lang-ar">
+    <h2>لماذا نضافة؟</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>سريع</h3>
+        <p>حجز في أقل من دقيقتين.</p>
+      </div>
+      <div class="card">
+        <h3>موثوق</h3>
+        <p>عاملات نظافة مختارات بعناية.</p>
+      </div>
+      <div class="card">
+        <h3>مرن</h3>
+        <p>مرة واحدة أو أسبوعياً.</p>
+      </div>
+    </div>
+  </div>
+
   <div class="lang-fr">
     <h2>Pourquoi Nadafa ?</h2>
     <div class="cards">
@@ -94,65 +101,17 @@
     </div>
   </div>
 
-  <!-- AR -->
-  <div class="lang-ar">
-    <h2>لماذا نضافة؟</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>سريع</h3>
-        <p>حجز في أقل من دقيقتين.</p>
-      </div>
-      <div class="card">
-        <h3>موثوق</h3>
-        <p>عاملات نظافة تم اختيارهن بعناية.</p>
-      </div>
-      <div class="card">
-        <h3>مرن</h3>
-        <p>مرة واحدة أو بشكل أسبوعي.</p>
-      </div>
-    </div>
-  </div>
-
 </section>
 
-<!-- SERVICE IMAGE -->
-<section class="service-visual">
-  <div class="service-img">
-    <img src="clean2.png" alt="Nettoyage à domicile">
-  </div>
-
-  <div class="service-text lang-fr">
-    <h2>Un service adapté à votre rythme</h2>
-    <p>Une aide-ménagère ponctuelle et professionnelle.</p>
-  </div>
-
-  <div class="service-text lang-ar">
-    <h2>خدمة تناسب نمط حياتك</h2>
-    <p>عاملة نظافة محترفة وفي الوقت المناسب.</p>
-  </div>
-</section>
-
-<!-- TRUST IMAGE -->
-<section class="trust">
-  <div class="lang-fr">
-    <h2>Ils nous font confiance</h2>
-  </div>
-
-  <div class="lang-ar">
-    <h2>ثقة وراحة</h2>
-  </div>
-
-  <img src="clean3.png" alt="Clients satisfaits">
+<!-- VISUAL -->
+<section class="visual">
+  <img src="clean2.png" alt="Nettoyage à domicile">
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="lang-fr">
-    <p>© 2025 Nadafa – Maroc</p>
-  </div>
-  <div class="lang-ar">
-    <p>© 2025 نضافة – المغرب</p>
-  </div>
+  <p class="lang-ar">© 2025 نضافة – المغرب</p>
+  <p class="lang-fr">© 2025 Nadafa – Maroc</p>
 </footer>
 
 <!-- SCRIPT -->
@@ -173,12 +132,9 @@
       document.documentElement.dir = 'rtl';
     }
   }
+
+  switchLang('ar');
 </script>
 
 </body>
 </html>
-
-
-
-
-
