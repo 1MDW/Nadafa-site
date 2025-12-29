@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
-<html lang="ar" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>Réservation | Nadafa</title>
+  <title>الحجز | Nadafa</title>
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -27,82 +26,87 @@
   </div>
 </div>
 
-
-
 <!-- HEADER -->
 <section class="page-header">
-  <h1 id="title">Réserver un service</h1>
-  <p id="subtitle">Simple, rapide et sécurisé</p>
+  <h1 id="title">حجز خدمة</h1>
+  <p id="subtitle">سهل، سريع وآمن</p>
 </section>
 
-<!-- FORM CARD -->
+<!-- FORM -->
 <section class="reservation-section">
   <form class="reservation-form">
 
     <div class="form-group">
-      <label id="nameLabel"><i class="fa-solid fa-user"></i> Nom complet</label>
-      <input type="text" placeholder="Votre nom" required>
+      <label id="nameLabel">
+        <i class="fa-solid fa-user"></i> الاسم الكامل
+      </label>
+      <input type="text" placeholder="الاسم الكامل" required>
     </div>
 
     <div class="form-group">
-      <label id="phoneLabel"><i class="fa-solid fa-phone"></i> Téléphone</label>
+      <label id="phoneLabel">
+        <i class="fa-solid fa-phone"></i> رقم الهاتف
+      </label>
       <input type="tel" placeholder="06XXXXXXXX" required>
     </div>
 
+    <!-- VILLE -->
     <div class="form-group">
-  <label>
-    <span class="lang-fr">Ville</span>
-    <span class="lang-ar">المدينة</span>
-  </label>
+      <label>
+        <span class="lang-fr">Ville</span>
+        <span class="lang-ar">المدينة</span>
+      </label>
 
-  <select>
-    <option class="lang-fr">Choisissez une ville</option>
-    <option class="lang-ar">اختر المدينة</option>
+      <select required>
+        <option selected disabled>—</option>
+        <option>Casablanca</option>
+        <option>Rabat</option>
+        <option>Marrakech</option>
+        <option>Tanger</option>
+      </select>
+    </div>
 
-    <option>Casablanca</option>
-    <option>Rabat</option>
-    <option>Marrakech</option>
-    <option>Tanger</option>
-  </select>
-</div>
-
-
-<div class="form-group">
-  <label>
-    <span class="lang-fr">Quartier</span>
-    <span class="lang-ar">الحي</span>
-  </label>
-
-  <input type="text" placeholder="Ex: Gauthier,Maarif, Agdal">
-</div>
-
+    <!-- QUARTIER -->
+    <div class="form-group">
+      <label>
+        <span class="lang-fr">Quartier</span>
+        <span class="lang-ar">الحي</span>
+      </label>
+      <input type="text" placeholder="Ex: Maarif, Agdal, Guéliz">
+    </div>
 
     <div class="form-group">
-      <label id="serviceLabel"><i class="fa-solid fa-clock"></i> Durée du service</label>
+      <label id="serviceLabel">
+        <i class="fa-solid fa-clock"></i> مدة الخدمة
+      </label>
       <select>
-        <option>2 heures – 120 DH</option>
-        <option>3 heures – 170 DH</option>
-        <option>4 heures – 220 DH</option>
+        <option>2 ساعات – 120 درهم</option>
+        <option>3 ساعات – 170 درهم</option>
+        <option>4 ساعات – 220 درهم</option>
       </select>
     </div>
 
     <div class="form-group">
-      <label id="dateLabel"><i class="fa-solid fa-calendar"></i> Date souhaitée</label>
+      <label id="dateLabel">
+        <i class="fa-solid fa-calendar"></i> التاريخ المطلوب
+      </label>
       <input type="date" required>
     </div>
 
     <div class="form-group">
-      <label id="noteLabel"><i class="fa-solid fa-message"></i> Remarque</label>
-      <textarea placeholder="Informations supplémentaires (optionnel)"></textarea>
+      <label id="noteLabel">
+        <i class="fa-solid fa-message"></i> ملاحظات
+      </label>
+      <textarea placeholder="معلومات إضافية (اختياري)"></textarea>
     </div>
 
     <button class="btn-primary full-width" id="submitBtn">
-      Confirmer la réservation
+      تأكيد الحجز
     </button>
 
     <p class="secure-text">
       <i class="fa-solid fa-shield-halved"></i>
-      <span id="secureText">Vos informations sont confidentielles</span>
+      <span id="secureText">معلوماتك محمية ولن يتم مشاركتها</span>
     </p>
 
   </form>
@@ -110,7 +114,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 Nadafa – Tous droits réservés</p>
+  <p>© 2025 Nadafa – جميع الحقوق محفوظة</p>
 </footer>
 
 <!-- LANGUAGE SCRIPT -->
@@ -125,7 +129,6 @@ function setLanguage(lang) {
 
     nameLabel.innerHTML = '<i class="fa-solid fa-user"></i> الاسم الكامل';
     phoneLabel.innerHTML = '<i class="fa-solid fa-phone"></i> رقم الهاتف';
-    cityLabel.innerHTML = '<i class="fa-solid fa-location-dot"></i> المدينة';
     serviceLabel.innerHTML = '<i class="fa-solid fa-clock"></i> مدة الخدمة';
     dateLabel.innerHTML = '<i class="fa-solid fa-calendar"></i> التاريخ المطلوب';
     noteLabel.innerHTML = '<i class="fa-solid fa-message"></i> ملاحظات';
@@ -141,7 +144,6 @@ function setLanguage(lang) {
 
     nameLabel.innerHTML = '<i class="fa-solid fa-user"></i> Nom complet';
     phoneLabel.innerHTML = '<i class="fa-solid fa-phone"></i> Téléphone';
-    cityLabel.innerHTML = '<i class="fa-solid fa-location-dot"></i> Ville';
     serviceLabel.innerHTML = '<i class="fa-solid fa-clock"></i> Durée du service';
     dateLabel.innerHTML = '<i class="fa-solid fa-calendar"></i> Date souhaitée';
     noteLabel.innerHTML = '<i class="fa-solid fa-message"></i> Remarque';
@@ -150,7 +152,7 @@ function setLanguage(lang) {
   }
 }
 </script>
-  
+
 <script>
   setLanguage('ar');
 </script>
