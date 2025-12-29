@@ -2,34 +2,33 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>الحجز | Nadafa</title>
-
+  <title>Réservation | Nadafa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
-<div class="navbar">
+<header class="navbar">
   <div class="logo">Nadafa</div>
 
   <div class="nav-actions">
-    <a href="index.html" class="nav-link">
-      <i class="fa-solid fa-house"></i>
-      <span class="lang-fr">Accueil</span>
-      <span class="lang-ar">الرئيسية</span>
-    </a>
+    <a href="index.html" class="nav-link">🏠</a>
 
-    <span class="nav-link" onclick="setLanguage('fr')">FR</span>
-    <span class="separator">|</span>
-    <span class="nav-link" onclick="setLanguage('ar')">AR</span>
+    <span class="lang-switch" onclick="switchLang('fr')">FR</span>
+    <span>|</span>
+    <span class="lang-switch" onclick="switchLang('ar')">AR</span>
   </div>
-</div>
+</header>
 
 <!-- HEADER -->
 <section class="page-header">
-  <h1 id="title">حجز خدمة</h1>
-  <p id="subtitle">سهل، سريع وآمن</p>
+  <h1 class="lang-ar">حجز الخدمة</h1>
+  <h1 class="lang-fr">Réserver un service</h1>
+
+  <p class="lang-ar">املأ المعلومات وسنتكفل بالباقي</p>
+  <p class="lang-fr">Remplissez le formulaire</p>
 </section>
 
 <!-- FORM -->
@@ -37,27 +36,21 @@
   <form class="reservation-form">
 
     <div class="form-group">
-      <label id="nameLabel">
-        <i class="fa-solid fa-user"></i> الاسم الكامل
-      </label>
-      <input type="text" placeholder="nom complet-الاسم الكامل" required>
+      <label class="lang-ar">الاسم الكامل</label>
+      <label class="lang-fr">Nom complet</label>
+      <input type="text" required>
     </div>
 
     <div class="form-group">
-      <label id="phoneLabel">
-        <i class="fa-solid fa-phone"></i> رقم الهاتف
-      </label>
-      <input type="tel" placeholder="06XXXXXXXX" required>
+      <label class="lang-ar">رقم الهاتف</label>
+      <label class="lang-fr">Téléphone</label>
+      <input type="tel" required>
     </div>
 
-    <!-- VILLE -->
     <div class="form-group">
-     <label id="cityLabel">
-        <i class="fa-solid fa-location-dot"></i> المدينة
-      </label>
-
+      <label class="lang-ar">المدينة</label>
+      <label class="lang-fr">Ville</label>
       <select required>
-        <option selected disabled>—</option>
         <option>Casablanca</option>
         <option>Rabat</option>
         <option>Marrakech</option>
@@ -65,105 +58,47 @@
       </select>
     </div>
 
-    <!-- QUARTIER -->
     <div class="form-group">
-      <label id="hayLabel">
-        <i class="fa-solid fa-house"></i> الحي
-      </label>
-      <input type="text" placeholder="Ex: Maarif, Agdal, Guéliz">
+      <label class="lang-ar">الحي</label>
+      <label class="lang-fr">Quartier</label>
+      <input type="text">
     </div>
 
     <div class="form-group">
-      <label id="serviceLabel">
-        <i class="fa-solid fa-clock"></i> مدة الخدمة
-      </label>
-      <select id="serviceSelect">
+      <label class="lang-ar">مدة الخدمة</label>
+      <label class="lang-fr">Durée</label>
+      <select>
+        <option>2 ساعات – 120 درهم</option>
+        <option>3 ساعات – 170 درهم</option>
+        <option>4 ساعات – 220 درهم</option>
       </select>
     </div>
 
     <div class="form-group">
-      <label id="dateLabel">
-        <i class="fa-solid fa-calendar"></i> التاريخ المطلوب
-      </label>
+      <label class="lang-ar">التاريخ</label>
+      <label class="lang-fr">Date</label>
       <input type="date" required>
     </div>
 
-    <div class="form-group">
-      <label id="noteLabel">
-        <i class="fa-solid fa-message"></i> ملاحظات
-      </label>
-      <textarea placeholder="d'autres remarques معلومات إضافية (اختياري) "></textarea>
-    </div>
-
-    <button class="btn-primary full-width" id="submitBtn">
-      تأكيد الحجز
-    </button>
-
-    <p class="secure-text">
-      <i class="fa-solid fa-shield-halved"></i>
-      <span id="secureText">معلوماتك محمية ولن يتم مشاركتها</span>
-    </p>
+    <button class="btn-primary full-width lang-ar">تأكيد الحجز</button>
+    <button class="btn-primary full-width lang-fr">Confirmer</button>
 
   </form>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© 2025 Nadafa – جميع الحقوق محفوظة</p>
+  <div class="lang-ar">© 2025 نضافة – المغرب</div>
+  <div class="lang-fr">© 2025 Nadafa – Maroc</div>
 </footer>
 
-<!-- LANGUAGE SCRIPT -->
 <script>
-function setLanguage(lang) {
-  if (lang === "ar") {
-    document.documentElement.lang = "ar";
-    document.documentElement.dir = "rtl";
-
-    title.innerText = "حجز خدمة";
-    subtitle.innerText = "سهل، سريع وآمن";
-
-    nameLabel.innerHTML = '<i class="fa-solid fa-user"></i> الاسم الكامل';
-    phoneLabel.innerHTML = '<i class="fa-solid fa-phone"></i> رقم الهاتف';
-    cityLabel.innerHTML = '<i class="fa-solid fa-location-dot"></i> المدينة';
-    hayLabel.innerHTML = '<i class="fa-solid fa-house"></i> الحي';
-    serviceLabel.innerHTML = '<i class="fa-solid fa-clock"></i> مدة الخدمة';
-    dateLabel.innerHTML = '<i class="fa-solid fa-calendar"></i> التاريخ المطلوب';
-    noteLabel.innerHTML = '<i class="fa-solid fa-message"></i> ملاحظات';
-    submitBtn.innerText = "تأكيد الحجز";
-    secureText.innerText = "معلوماتك محمية ولن يتم مشاركتها";
-    serviceSelect.innerHTML = `
-      <option> ساعتان – 120 درهم</option>
-      <option> ثلاث ساعات – 170 درهم</option>
-      <option> اربع ساعات – 220 درهم</option>
-    `;
-
-  } else {
-    document.documentElement.lang = "fr";
-    document.documentElement.dir = "ltr";
-
-    title.innerText = "Réserver un service";
-    subtitle.innerText = "Simple, rapide et sécurisé";
-
-    nameLabel.innerHTML = '<i class="fa-solid fa-user"></i> Nom complet';
-    phoneLabel.innerHTML = '<i class="fa-solid fa-phone"></i> Téléphone';
-    cityLabel.innerHTML = '<i class="fa-solid fa-location-dot"></i> Ville';
-    hayLabel.innerHTML = '<i class="fa-solid fa-house"></i> Quartier';
-    serviceLabel.innerHTML = '<i class="fa-solid fa-clock"></i> Durée du service';
-    dateLabel.innerHTML = '<i class="fa-solid fa-calendar"></i> Date souhaitée';
-    noteLabel.innerHTML = '<i class="fa-solid fa-message"></i> Remarque';
-    submitBtn.innerText = "Confirmer la réservation";
-    secureText.innerText = "Vos informations sont confidentielles";
-       serviceSelect.innerHTML = `
-      <option>2 heures – 120 DH</option>
-      <option>3 heures – 170 DH</option>
-      <option>4 heures – 220 DH</option>
-    `;
-  }
+function switchLang(lang) {
+  document.querySelectorAll('.lang-fr').forEach(e => e.style.display = lang === 'fr' ? 'block' : 'none');
+  document.querySelectorAll('.lang-ar').forEach(e => e.style.display = lang === 'ar' ? 'block' : 'none');
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 }
-</script>
-
-<script>
-  setLanguage('ar');
+switchLang('ar');
 </script>
 
 </body>
