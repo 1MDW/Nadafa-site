@@ -2,11 +2,15 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>Tarifs | Nadafa</title>
+  <title>الأسعار | Nadafa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <!-- NAVBAR -->
@@ -14,64 +18,188 @@
   <div class="logo">Nadafa</div>
 
   <div class="nav-actions">
-    <a href="index.html" class="nav-link">🏠</a>
+    <a href="index.html" class="nav-link">
+      <i class="fa-solid fa-house"></i>
+      <span class="lang-ar">الرئيسية</span>
+      <span class="lang-fr">Accueil</span>
+    </a>
 
-    <span class="lang-switch" onclick="switchLang('fr')">FR</span>
+    <span class="nav-link" onclick="showAR()">AR</span>
     <span>|</span>
-    <span class="lang-switch" onclick="switchLang('ar')">AR</span>
-
-    <a href="reservation.html" class="btn-primary">Réserver</a>
+    <span class="nav-link" onclick="showFR()">FR</span>
   </div>
 </header>
 
-<!-- HEADER -->
-<section class="page-header">
-  <h1 class="lang-ar">الأسعار</h1>
-  <h1 class="lang-fr">Nos tarifs</h1>
+<!-- ================= AR ================= -->
+<section id="tarifs-ar">
 
-  <p class="lang-ar">أسعار واضحة بدون مفاجآت</p>
-  <p class="lang-fr">Des prix simples et transparents</p>
+  <!-- HERO -->
+  <section class="page-header">
+    <h1>الأسعار</h1>
+    <p>أثمنة واضحة، خدمة موثوقة، بلا مفاجآت</p>
+  </section>
+
+  <!-- TARIFS -->
+  <section class="tarifs">
+
+    <!-- 2H -->
+    <div class="tarif-card">
+      <h3>ساعتان</h3>
+      <p class="price">120 درهم</p>
+
+      <ul class="features">
+        <li class="icon-text"><i class="fa-solid fa-clock"></i><span>ساعتان من التنظيف</span></li>
+        <li class="icon-text"><i class="fa-solid fa-house"></i><span>تنظيف أساسي</span></li>
+        <li class="icon-text"><i class="fa-solid fa-user-check"></i><span>عاملة نظافة موثوقة</span></li>
+      </ul>
+
+      <div class="btn-group">
+        <a class="btn-reserver" href="reservation.html">احجز الآن</a>
+        <a class="btn-whatsapp" target="_blank"
+           href="https://wa.me/2126XXXXXXXX?text=السلام%20عليكم،%20بغيت%20نحجز%20خدمة%20تنظيف%20لمدة%20ساعتين">
+          واتساب
+        </a>
+      </div>
+    </div>
+
+    <!-- 3H -->
+    <div class="tarif-card popular">
+      <h3>ثلاث ساعات</h3>
+      <p class="price">170 درهم</p>
+
+      <ul class="features">
+        <li class="icon-text"><i class="fa-solid fa-clock"></i><span>3 ساعات من التنظيف</span></li>
+        <li class="icon-text"><i class="fa-solid fa-broom"></i><span>تنظيف كامل</span></li>
+        <li class="icon-text"><i class="fa-solid fa-star"></i><span>الأكثر طلباً</span></li>
+      </ul>
+
+      <div class="btn-group">
+        <a class="btn-reserver" href="reservation.html">احجز الآن</a>
+        <a class="btn-whatsapp" target="_blank"
+           href="https://wa.me/2126XXXXXXXX?text=السلام%20عليكم،%20بغيت%20نحجز%20خدمة%20تنظيف%20لمدة%20ثلاث%20ساعات">
+          واتساب
+        </a>
+      </div>
+    </div>
+
+    <!-- 4H -->
+    <div class="tarif-card">
+      <h3>أربع ساعات</h3>
+      <p class="price">220 درهم</p>
+
+      <ul class="features">
+        <li class="icon-text"><i class="fa-solid fa-clock"></i><span>4 ساعات من التنظيف</span></li>
+        <li class="icon-text"><i class="fa-solid fa-soap"></i><span>تنظيف عميق</span></li>
+        <li class="icon-text"><i class="fa-solid fa-thumbs-up"></i><span>مناسب للمنازل الكبيرة</span></li>
+      </ul>
+
+      <div class="btn-group">
+        <a class="btn-reserver" href="reservation.html">احجز الآن</a>
+        <a class="btn-whatsapp" target="_blank"
+           href="https://wa.me/2126XXXXXXXX?text=السلام%20عليكم،%20بغيت%20نحجز%20خدمة%20تنظيف%20لمدة%20أربع%20ساعات">
+          واتساب
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- TRUST -->
+  <section class="page-header">
+    <p>
+      ✔ بدون التزام &nbsp; • &nbsp;
+      ✔ أداء بعد الخدمة &nbsp; • &nbsp;
+      ✔ دعم عبر واتساب
+    </p>
+  </section>
+
 </section>
 
-<!-- TARIFS -->
-<section class="tarifs">
+<!-- ================= FR ================= -->
+<section id="tarifs-fr" style="display:none;" dir="ltr">
 
-  <div class="tarif-card">
-    <h3 class="lang-ar">تنظيف لمدة ساعتين</h3>
-    <h3 class="lang-fr">Nettoyage – 2 heures</h3>
-    <div class="price">120 DH</div>
-    <a href="reservation.html" class="btn-primary">احجز</a>
-  </div>
+  <section class="page-header">
+    <h1>Nos Tarifs</h1>
+    <p>Des prix clairs, un service fiable</p>
+  </section>
 
-  <div class="tarif-card popular">
-    <h3 class="lang-ar">تنظيف لمدة 3 ساعات</h3>
-    <h3 class="lang-fr">Nettoyage – 3 heures</h3>
-    <div class="price">170 DH</div>
-    <a href="reservation.html" class="btn-primary">احجز</a>
-  </div>
+  <section class="tarifs">
 
-  <div class="tarif-card">
-    <h3 class="lang-ar">تنظيف لمدة 4 ساعات</h3>
-    <h3 class="lang-fr">Nettoyage – 4 heures</h3>
-    <div class="price">220 DH</div>
-    <a href="reservation.html" class="btn-primary">احجز</a>
-  </div>
+    <div class="tarif-card">
+      <h3>2 Heures</h3>
+      <p class="price">120 DH</p>
+
+      <ul class="features">
+        <li class="icon-text"><i class="fa-solid fa-clock"></i><span>2 heures de ménage</span></li>
+        <li class="icon-text"><i class="fa-solid fa-house"></i><span>Nettoyage basique</span></li>
+        <li class="icon-text"><i class="fa-solid fa-user-check"></i><span>Personnel vérifié</span></li>
+      </ul>
+
+      <div class="btn-group">
+        <a class="btn-reserver" href="reservation.html">Réserver</a>
+        <a class="btn-whatsapp" target="_blank"
+           href="https://wa.me/2126XXXXXXXX?text=Bonjour,%20je%20souhaite%20réserver%202%20heures%20de%20ménage">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="tarif-card popular">
+      <h3>3 Heures</h3>
+      <p class="price">170 DH</p>
+
+      <ul class="features">
+        <li class="icon-text"><i class="fa-solid fa-clock"></i><span>3 heures de ménage</span></li>
+        <li class="icon-text"><i class="fa-solid fa-broom"></i><span>Nettoyage complet</span></li>
+        <li class="icon-text"><i class="fa-solid fa-star"></i><span>Offre la plus demandée</span></li>
+      </ul>
+
+      <div class="btn-group">
+        <a class="btn-reserver" href="reservation.html">Réserver</a>
+        <a class="btn-whatsapp" target="_blank"
+           href="https://wa.me/2126XXXXXXXX?text=Bonjour,%20je%20souhaite%20réserver%203%20heures%20de%20ménage">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="tarif-card">
+      <h3>4 Heures</h3>
+      <p class="price">220 DH</p>
+
+      <ul class="features">
+        <li class="icon-text"><i class="fa-solid fa-clock"></i><span>4 heures de ménage</span></li>
+        <li class="icon-text"><i class="fa-solid fa-soap"></i><span>Nettoyage en profondeur</span></li>
+        <li class="icon-text"><i class="fa-solid fa-thumbs-up"></i><span>Idéal grands logements</span></li>
+      </ul>
+
+      <div class="btn-group">
+        <a class="btn-reserver" href="reservation.html">Réserver</a>
+        <a class="btn-whatsapp" target="_blank"
+           href="https://wa.me/2126XXXXXXXX?text=Bonjour,%20je%20souhaite%20réserver%204%20heures%20de%20ménage">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+
+  </section>
 
 </section>
 
-<footer>
-  <div class="lang-ar">© 2025 نضافة – المغرب</div>
-  <div class="lang-fr">© 2025 Nadafa – Maroc</div>
-</footer>
-
+<!-- SCRIPT LANG -->
 <script>
-function switchLang(lang) {
-  document.querySelectorAll('.lang-fr').forEach(e => e.style.display = lang === 'fr' ? 'block' : 'none');
-  document.querySelectorAll('.lang-ar').forEach(e => e.style.display = lang === 'ar' ? 'block' : 'none');
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+function showAR() {
+  document.getElementById("tarifs-ar").style.display = "block";
+  document.getElementById("tarifs-fr").style.display = "none";
+  document.documentElement.lang = "ar";
+  document.documentElement.dir = "rtl";
 }
-switchLang('ar');
+function showFR() {
+  document.getElementById("tarifs-ar").style.display = "none";
+  document.getElementById("tarifs-fr").style.display = "block";
+  document.documentElement.lang = "fr";
+  document.documentElement.dir = "ltr";
+}
 </script>
 
 </body>
