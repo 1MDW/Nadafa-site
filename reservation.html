@@ -77,10 +77,7 @@
       <label id="serviceLabel">
         <i class="fa-solid fa-clock"></i> مدة الخدمة
       </label>
-      <select>
-        <option>2 ساعات – 120 درهم</option>
-        <option>3 ساعات – 170 درهم</option>
-        <option>4 ساعات – 220 درهم</option>
+      <select id="serviceSelect">
       </select>
     </div>
 
@@ -134,6 +131,11 @@ function setLanguage(lang) {
     noteLabel.innerHTML = '<i class="fa-solid fa-message"></i> ملاحظات';
     submitBtn.innerText = "تأكيد الحجز";
     secureText.innerText = "معلوماتك محمية ولن يتم مشاركتها";
+    serviceSelect.innerHTML = `
+      <option> ساعتان – 120 درهم</option>
+      <option> ثلاث ساعات – 170 درهم</option>
+      <option> اربع ساعات – 220 درهم</option>
+    `;
 
   } else {
     document.documentElement.lang = "fr";
@@ -151,6 +153,10 @@ function setLanguage(lang) {
     noteLabel.innerHTML = '<i class="fa-solid fa-message"></i> Remarque';
     submitBtn.innerText = "Confirmer la réservation";
     secureText.innerText = "Vos informations sont confidentielles";
+    serviceSelect.innerHTML = '
+      <option>2 heures – 120 DH</option>
+      <option>3 heures – 170 DH</option>
+      <option>4 heures – 220 DH</option>';
   }
 }
 </script>
