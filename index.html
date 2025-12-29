@@ -13,41 +13,48 @@
 <header class="navbar">
   <div class="logo">Nadafa</div>
 
-  <div class="nav-actions">
+  <nav class="nav-actions">
+    <a href="index.html" class="nav-link lang-ar">الرئيسية</a>
+    <a href="index.html" class="nav-link lang-fr">Accueil</a>
+
+    <a href="tarifs.html" class="nav-link lang-ar">الأسعار</a>
+    <a href="tarifs.html" class="nav-link lang-fr">Tarifs</a>
+
     <span class="lang-switch" onclick="switchLang('fr')">FR</span>
     <span class="separator">|</span>
     <span class="lang-switch" onclick="switchLang('ar')">AR</span>
 
-    <a href="tarifs.html" class="btn-primary">Tarifs</a>
-
     <a
-      href="https://wa.me/2126XXXXXXXX"
+      href="https://wa.me/2126XXXXXXXX?text=مرحبا،%20بغيت%20نحجز%20خدمة%20نظافة%20مع%20Nadafa"
       target="_blank"
       class="btn-whatsapp"
     >
-      WhatsApp
+      <span class="lang-ar">احجز عبر واتساب</span>
+      <span class="lang-fr">Réserver via WhatsApp</span>
     </a>
-  </div>
+  </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
 
-    <!-- TEXT -->
     <div class="hero-text lang-ar">
       <h1>النظافة بلا تعب ولا قلق</h1>
-      <p>خدمة نظافة منزلية احترافية، سريعة وآمنة.</p>
-      <a href="reservation.html" class="btn-primary">احجز الآن</a>
+      <p>احجز عاملة نظافة موثوقة بكل سهولة.</p>
+      <div class="hero-buttons">
+        <a href="reservation.html" class="btn-primary">احجز الآن</a>
+      </div>
     </div>
 
     <div class="hero-text lang-fr">
       <h1>Le ménage, sans stress.</h1>
-      <p>Un service de ménage fiable et professionnel.</p>
-      <a href="reservation.html" class="btn-primary">Réserver maintenant</a>
+      <p>Réservez une femme de ménage fiable en quelques clics.</p>
+      <div class="hero-buttons">
+        <a href="reservation.html" class="btn-primary">Réserver maintenant</a>
+      </div>
     </div>
 
-    <!-- IMAGE -->
     <div class="hero-img">
       <img src="clean1.png" alt="Service de ménage professionnel">
     </div>
@@ -67,11 +74,11 @@
       </div>
       <div class="card">
         <h3>موثوق</h3>
-        <p>عاملات نظافة تم اختيارهن بعناية.</p>
+        <p>عاملات نظافة مختارات بعناية.</p>
       </div>
       <div class="card">
         <h3>مرن</h3>
-        <p>مرة واحدة أو بشكل أسبوعي.</p>
+        <p>مرة واحدة أو أسبوعياً.</p>
       </div>
     </div>
   </div>
@@ -85,7 +92,7 @@
       </div>
       <div class="card">
         <h3>Fiable</h3>
-        <p>Personnel vérifié.</p>
+        <p>Femmes de ménage vérifiées.</p>
       </div>
       <div class="card">
         <h3>Flexible</h3>
@@ -96,36 +103,15 @@
 
 </section>
 
-<!-- VISUAL SECTION -->
+<!-- VISUAL -->
 <section class="visual">
   <img src="clean2.png" alt="Nettoyage à domicile">
 </section>
 
-<!-- TRUST -->
-<section class="features">
-  <div class="lang-ar">
-    <h2>ثقة وراحة</h2>
-    <p>آلاف الزبناء راضين على خدماتنا.</p>
-  </div>
-
-  <div class="lang-fr">
-    <h2>Ils nous font confiance</h2>
-    <p>Des centaines de clients satisfaits.</p>
-  </div>
-
-  <div class="visual">
-    <img src="clean3.png" alt="Clients satisfaits">
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer>
-  <div class="lang-ar">
-    © 2025 نضافة – المغرب
-  </div>
-  <div class="lang-fr">
-    © 2025 Nadafa – Maroc
-  </div>
+  <p class="lang-ar">© 2025 نضافة – المغرب</p>
+  <p class="lang-fr">© 2025 Nadafa – Maroc</p>
 </footer>
 
 <!-- SCRIPT -->
