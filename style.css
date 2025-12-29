@@ -412,27 +412,5 @@ html[dir="rtl"] .service-visual {
   }
 }
 
-/* =========================
-   LANGUAGE VISIBILITY
-========================= */
-
-/* العربية هي الافتراضية */
-.lang-fr {
-  display: none;
-}
-
-.lang-ar {
-  display: inline;
-}
-
-/* ملي كتكون اللغة فرنسية */
-html[dir="ltr"] .lang-fr {
-  display: inline;
-}
-
-html[dir="ltr"] .lang-ar {
-  display: none;
-}
-
 
 
