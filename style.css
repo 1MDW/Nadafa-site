@@ -159,11 +159,13 @@ a {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;   /* كبرنا المساحة */
   margin: auto;
+  padding: 20px;       /* باش ما يلصقوش فالحواف */
 }
+
 
 /* CARD – ANIMATED */
 .card {
@@ -438,6 +440,7 @@ html[dir="rtl"] .icon-text {
     justify-content: center;
   }
 }
+
 
 
 
