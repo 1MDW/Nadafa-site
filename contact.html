@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>اتصل بنا | Nadafa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Nadafa</div>
+
+  <div class="nav-actions">
+    <a href="index.html" class="nav-link">
+      <i class="fa-solid fa-house"></i>
+    </a>
+
+    <a href="tarifs.html" class="nav-link">
+      <span class="lang-ar">الأسعار</span>
+      <span class="lang-fr">Tarifs</span>
+    </a>
+
+    <a href="reservation.html" class="nav-link">
+      <span class="lang-ar">الحجز</span>
+      <span class="lang-fr">Réserver</span>
+    </a>
+
+    <span class="nav-link" onclick="showAR()">AR</span>
+    <span>|</span>
+    <span class="nav-link" onclick="showFR()">FR</span>
+  </div>
+</header>
+
+<!-- HEADER -->
+<section class="page-header">
+  <h1 class="lang-ar">اتصل بنا</h1>
+  <h1 class="lang-fr">Contactez-nous</h1>
+
+  <p class="lang-ar">نحن هنا للإجابة على جميع أسئلتك</p>
+  <p class="lang-fr">Nous sommes là pour répondre à vos questions</p>
+</section>
+
+<!-- CONTACT INFO -->
+<section class="features">
+
+  <!-- AR -->
+  <div class="lang-ar">
+    <div class="cards">
+
+      <div class="card">
+        <i class="fa-brands fa-whatsapp"></i>
+        <h3>واتساب</h3>
+        <p>تواصل معنا مباشرة عبر واتساب</p>
+        <a href="https://wa.me/2126XXXXXXXX" target="_blank" class="btn-primary">
+          تواصل الآن
+        </a>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-phone"></i>
+        <h3>الهاتف</h3>
+        <p>06 XX XX XX XX</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>البريد الإلكتروني</h3>
+        <p>contact@nadafa.ma</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FR -->
+  <div class="lang-fr">
+    <div class="cards">
+
+      <div class="card">
+        <i class="fa-brands fa-whatsapp"></i>
+        <h3>WhatsApp</h3>
+        <p>Contactez-nous directement via WhatsApp</p>
+        <a href="https://wa.me/2126XXXXXXXX" target="_blank" class="btn-primary">
+          Contacter
+        </a>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-phone"></i>
+        <h3>Téléphone</h3>
+        <p>06 XX XX XX XX</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Email</h3>
+        <p>contact@nadafa.ma</p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- CONTACT FORM -->
+<section class="reservation-section">
+
+  <form class="reservation-form">
+
+    <div class="form-group">
+      <label class="lang-ar">الاسم</label>
+      <label class="lang-fr">Nom</label>
+      <input type="text" required>
+    </div>
+
+    <div class="form-group">
+      <label class="lang-ar">البريد الإلكتروني</label>
+      <label class="lang-fr">Email</label>
+      <input type="email" required>
+    </div>
+
+    <div class="form-group">
+      <label class="lang-ar">رسالتك</label>
+      <label class="lang-fr">Message</label>
+      <textarea rows="4" required></textarea>
+    </div>
+
+    <div style="text-align:center">
+      <button type="submit" class="btn-primary lang-ar">إرسال</button>
+      <button type="submit" class="btn-primary lang-fr">Envoyer</button>
+    </div>
+
+  </form>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="lang-ar">© 2025 نضافة – المغرب</div>
+  <div class="lang-fr">© 2025 Nadafa – Maroc</div>
+</footer>
+
+<!-- SCRIPT LANG -->
+<script>
+function showAR() {
+  document.querySelectorAll('.lang-ar').forEach(e => e.style.display = 'block');
+  document.querySelectorAll('.lang-fr').forEach(e => e.style.display = 'none');
+  document.documentElement.lang = 'ar';
+  document.documentElement.dir = 'rtl';
+}
+
+function showFR() {
+  document.querySelectorAll('.lang-ar').forEach(e => e.style.display = 'none');
+  document.querySelectorAll('.lang-fr').forEach(e => e.style.display = 'block');
+  document.documentElement.lang = 'fr';
+  document.documentElement.dir = 'ltr';
+}
+
+showAR();
+</script>
+
+</body>
+</html>
