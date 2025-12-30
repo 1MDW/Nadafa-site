@@ -80,19 +80,42 @@ a {
   transform: translateY(-2px);
 }
 
+/* WHATSAPP BUTTON - GLOBAL */
 .btn-whatsapp {
-  background: #25d366;
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: linear-gradient(135deg, #25d366, #1ebe5d);
   color: #fff;
-  padding: 10px 18px;
+
+  padding: 12px 18px;
   border-radius: 30px;
+
   font-weight: 600;
-  transition: transform 0.2s, box-shadow 0.2s;
+  font-size: 15px;
+
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.3s ease;
 }
 
+/* HOVER EFFECT */
 .btn-whatsapp:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(37,211,102,0.4);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
+  background: linear-gradient(135deg, #1ebe5d, #25d366);
 }
+
+/* ACTIVE (CLICK) */
+.btn-whatsapp:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
 
 /* ================= HERO ================= */
 .hero {
@@ -317,5 +340,6 @@ html[dir="rtl"] .icon-text {
     justify-content: center;
   }
 }
+
 
 
