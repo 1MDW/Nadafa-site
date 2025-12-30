@@ -324,12 +324,48 @@ a {
 
 
 /* ================= FOOTER ================= */
-footer {
+.site-footer {
   background: #1e88e5;
   color: #fff;
-  padding: 25px;
-  text-align: center;
+  padding: 30px 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-text {
   font-size: 14px;
+}
+
+/* CONTACT BUTTON IN FOOTER */
+.footer-contact-btn {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.footer-contact-btn:hover {
+  background: #fff;
+  color: #1e88e5;
+  transform: translateY(-2px);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 /* ================= RTL FIX ================= */
@@ -349,6 +385,7 @@ html[dir="rtl"] .icon-text {
     justify-content: center;
   }
 }
+
 
 
 
