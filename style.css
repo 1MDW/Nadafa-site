@@ -165,12 +165,65 @@ a {
   margin: auto;
 }
 
+/* CARD – ANIMATED */
 .card {
   background: #f7f9fb;
-  padding: 30px;
-  border-radius: 18px;
+  padding: 30px 25px;
+  border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: 
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+  position: relative;
+  overflow: hidden;
 }
+
+/* Light gradient overlay */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(30,136,229,0.08),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.12);
+  background: #ffffff;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* card */
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #1e88e5;
+  transition: transform 0.3s ease;
+}
+
+.card:hover h3 {
+  transform: translateY(-3px);
+}
+
+/* Text */
+.card p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
 
 /* ================= PAGE HEADER ================= */
 .page-header {
@@ -385,6 +438,7 @@ html[dir="rtl"] .icon-text {
     justify-content: center;
   }
 }
+
 
 
 
