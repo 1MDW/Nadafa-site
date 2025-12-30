@@ -380,47 +380,41 @@ a {
 
 /* ================= FOOTER ================= */
 .site-footer {
-  background: #1e88e5;
-  color: #fff;
-  padding: 30px 20px;
+  background: #0f172a;
+  padding: 25px 20px;
+  margin-top: 60px;
 }
 
 .footer-content {
   max-width: 1200px;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 15px;
 }
 
 .footer-text {
+  color: #cbd5e1;
   font-size: 14px;
 }
 
-/* CONTACT BUTTON IN FOOTER */
-.footer-contact-btn {
-  background: rgba(255,255,255,0.15);
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 25px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+.footer-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 
-.footer-contact-btn:hover {
-  background: #fff;
-  color: #1e88e5;
-  transform: translateY(-2px);
+.footer-link {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
+.footer-link:hover {
+  color: #38bdf8;
 }
 
 /* ================= RTL FIX ================= */
@@ -440,6 +434,7 @@ html[dir="rtl"] .icon-text {
     justify-content: center;
   }
 }
+
 
 
 
