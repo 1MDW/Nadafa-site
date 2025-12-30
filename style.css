@@ -152,7 +152,7 @@ a {
 
 /* ================= FEATURES ================= */
 .features {
-  padding: 80px 30px;
+  padding: 100px 30px;
   background: #ffffff;
   text-align: center;
 }
@@ -161,7 +161,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
-  max-width: 1200px;   /* كبرنا المساحة */
+  max-width: 1000px;   /* كبرنا المساحة */
   margin: auto;
   padding: 20px;       /* باش ما يلصقوش فالحواف */
 }
@@ -440,6 +440,7 @@ html[dir="rtl"] .icon-text {
     justify-content: center;
   }
 }
+
 
 
 
