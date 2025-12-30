@@ -309,12 +309,18 @@ a {
   border: 1px solid #ccc;
 }
 
-.full-width {
+.confirm-btn-wrapper {
   display: flex;
   justify-content: center;
-  width: 100%;
-  margin-top: 20px;
+  margin-top: 25px;
 }
+
+/* الزر نفس الحجم فاللغتين */
+.confirm-btn-wrapper .btn-primary {
+  min-width: 220px;
+  text-align: center;
+}
+
 
 
 /* ================= FOOTER ================= */
@@ -343,6 +349,7 @@ html[dir="rtl"] .icon-text {
     justify-content: center;
   }
 }
+
 
 
 
