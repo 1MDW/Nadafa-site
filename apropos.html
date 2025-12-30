@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>من نحن | Nadafa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Nadafa</div>
+
+  <div class="nav-actions">
+    <a href="index.html" class="nav-link">
+      <i class="fa-solid fa-house"></i>
+      <span class="lang-ar">الرئيسية</span>
+      <span class="lang-fr">Accueil</span>
+    </a>
+
+    <a href="tarifs.html" class="nav-link">
+      <span class="lang-ar">الأسعار</span>
+      <span class="lang-fr">Tarifs</span>
+    </a>
+
+    <a href="reservation.html" class="nav-link">
+      <span class="lang-ar">الحجز</span>
+      <span class="lang-fr">Réserver</span>
+    </a>
+
+    <span class="nav-link" onclick="showAR()">AR</span>
+    <span>|</span>
+    <span class="nav-link" onclick="showFR()">FR</span>
+  </div>
+</header>
+
+<!-- HEADER -->
+<section class="page-header">
+  <h1 class="lang-ar">من نحن</h1>
+  <h1 class="lang-fr">À propos de nous</h1>
+
+  <p class="lang-ar">
+    نضافة هي خدمة عصرية للنظافة المنزلية بكل ثقة وسهولة
+  </p>
+  <p class="lang-fr">
+    Nadafa est un service moderne de ménage à domicile, simple et fiable
+  </p>
+</section>
+
+<!-- CONTENT -->
+<section class="features">
+
+  <!-- AR -->
+  <div class="lang-ar">
+    <div class="cards">
+
+      <div class="card">
+        <h3>من نحن؟</h3>
+        <p>
+          نضافة منصة كتسهّل عليك حجز عاملة نظافة موثوقة فالدار ديالك، 
+          بلا تعقيد ولا مفاجآت.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>شنو الهدف ديالنا؟</h3>
+        <p>
+          نوفرو خدمة نظافة بجودة عالية، أثمنة واضحة، وراحة تامة للزبون.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>علاش تختار نضافة؟</h3>
+        <p>
+          عاملات مختارات بعناية، دعم عبر واتساب، ومرونة فالوقت.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FR -->
+  <div class="lang-fr">
+    <div class="cards">
+
+      <div class="card">
+        <h3>Qui sommes-nous ?</h3>
+        <p>
+          Nadafa est une plateforme qui facilite la réservation
+          d’une femme de ménage fiable, en toute simplicité.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Notre mission</h3>
+        <p>
+          Offrir un service de ménage de qualité, avec des prix clairs
+          et une expérience sans stress.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Pourquoi Nadafa ?</h3>
+        <p>
+          Personnel vérifié, support WhatsApp et flexibilité totale.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- VISUAL -->
+<section class="visual">
+  <img src="clean3.png" alt="Service Nadafa">
+</section>
+
+<!-- CTA -->
+<section class="features">
+  <div class="lang-ar">
+    <h2>جاهز تحجز؟</h2>
+    <div style="text-align:center;margin-top:25px;">
+      <a href="reservation.html" class="btn-primary">احجز دابا</a>
+    </div>
+  </div>
+
+  <div class="lang-fr">
+    <h2>Prêt à réserver ?</h2>
+    <div style="text-align:center;margin-top:25px;">
+      <a href="reservation.html" class="btn-primary">Réserver maintenant</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="lang-ar">© 2025 نضافة – المغرب</div>
+  <div class="lang-fr">© 2025 Nadafa – Maroc</div>
+</footer>
+
+<!-- SCRIPT LANG -->
+<script>
+function showAR() {
+  document.querySelectorAll('.lang-ar').forEach(e => e.style.display = 'block');
+  document.querySelectorAll('.lang-fr').forEach(e => e.style.display = 'none');
+  document.documentElement.lang = 'ar';
+  document.documentElement.dir = 'rtl';
+}
+
+function showFR() {
+  document.querySelectorAll('.lang-ar').forEach(e => e.style.display = 'none');
+  document.querySelectorAll('.lang-fr').forEach(e => e.style.display = 'block');
+  document.documentElement.lang = 'fr';
+  document.documentElement.dir = 'ltr';
+}
+
+showAR();
+</script>
+
+</body>
+</html>
