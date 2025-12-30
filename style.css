@@ -238,6 +238,16 @@ a {
 
   box-shadow: 0 4px 10px rgba(30, 136, 229, 0.25);
 }
+.btn-reserver:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(30, 136, 229, 0.4);
+  background: linear-gradient(135deg, #1565c0, #1e88e5);
+}
+
+.btn-reserver:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 12px rgba(30, 136, 229, 0.3);
+}
 
 
 .popular {
@@ -307,4 +317,5 @@ html[dir="rtl"] .icon-text {
     justify-content: center;
   }
 }
+
 
