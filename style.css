@@ -224,11 +224,21 @@ a {
 .btn-reserver {
   flex: 1;
   text-align: center;
-  background: #1e88e5;
+  background: linear-gradient(135deg, #1e88e5, #42a5f5);
   color: #fff;
   padding: 12px;
   border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+
+  box-shadow: 0 4px 10px rgba(30, 136, 229, 0.25);
 }
+
 
 .popular {
   border: 2px solid #1e88e5;
@@ -297,3 +307,4 @@ html[dir="rtl"] .icon-text {
     justify-content: center;
   }
 }
+
