@@ -310,9 +310,12 @@ a {
 }
 
 .full-width {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 20px;
 }
+
 
 /* ================= FOOTER ================= */
 footer {
@@ -340,6 +343,7 @@ html[dir="rtl"] .icon-text {
     justify-content: center;
   }
 }
+
 
 
 
