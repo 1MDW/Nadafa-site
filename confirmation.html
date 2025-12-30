@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تأكيد الحجز | Nadafa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Nadafa</div>
+
+  <div class="nav-actions">
+    <a href="index.html" class="nav-link">
+      <i class="fa-solid fa-house"></i>
+    </a>
+
+    <span class="nav-link" onclick="switchLang('ar')">AR</span>
+    <span>|</span>
+    <span class="nav-link" onclick="switchLang('fr')">FR</span>
+  </div>
+</header>
+
+<!-- CONFIRMATION -->
+<section class="page-header">
+  <h1 class="lang-ar">تم تأكيد الحجز بنجاح ✅</h1>
+  <h1 class="lang-fr">Réservation confirmée ✅</h1>
+
+  <p class="lang-ar">توصلنا بالطلب ديالك، وغادي نتواصلو معاك قريباً</p>
+  <p class="lang-fr">Nous avons bien reçu votre demande</p>
+</section>
+
+<!-- DETAILS -->
+<section class="tarifs" style="max-width:700px">
+
+  <div class="tarif-card">
+    <h3 class="lang-ar">ماذا بعد؟</h3>
+    <h3 class="lang-fr">Prochaines étapes</h3>
+
+    <ul class="features">
+      <li class="icon-text">
+        <i class="fa-solid fa-check"></i>
+        <span class="lang-ar">التواصل معك لتأكيد التفاصيل</span>
+        <span class="lang-fr">Confirmation des détails</span>
+      </li>
+      <li class="icon-text">
+        <i class="fa-solid fa-user"></i>
+        <span class="lang-ar">إرسال عاملة نظافة موثوقة</span>
+        <span class="lang-fr">Envoi d’un agent qualifié</span>
+      </li>
+      <li class="icon-text">
+        <i class="fa-solid fa-star"></i>
+        <span class="lang-ar">خدمة احترافية ومضمونة</span>
+        <span class="lang-fr">Service professionnel garanti</span>
+      </li>
+    </ul>
+
+    <div class="btn-group">
+      <a href="index.html" class="btn-reserver lang-ar">العودة للرئيسية</a>
+      <a href="index.html" class="btn-reserver lang-fr">Retour à l’accueil</a>
+
+      <a class="btn-whatsapp" target="_blank"
+         href="https://wa.me/2126XXXXXXXX?text=السلام%20عليكم،%20راه%20درت%20حجز%20وبغيت%20نأكد%20التفاصيل">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="lang-ar">© 2025 نضافة – المغرب</div>
+  <div class="lang-fr">© 2025 Nadafa – Maroc</div>
+</footer>
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.lang-fr').forEach(e => e.style.display = lang === 'fr' ? 'block' : 'none');
+  document.querySelectorAll('.lang-ar').forEach(e => e.style.display = lang === 'ar' ? 'block' : 'none');
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+}
+switchLang('ar');
+</script>
+
+</body>
+</html>
