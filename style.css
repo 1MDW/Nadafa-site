@@ -487,6 +487,18 @@ html[dir="rtl"] .icon-text {
   transform: translateY(0);
 }
 
+section {
+  padding: 80px 6%;
+}
+.hero {
+  padding: 110px 6% 90px;
+}
+.features,
+.how-it-works,
+.trust {
+  padding: 90px 6%;
+}
+
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
@@ -534,6 +546,7 @@ html[dir="rtl"] .icon-text {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
