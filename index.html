@@ -25,6 +25,20 @@
 </head>
 
 <body>
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-up').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
 
 <!-- NAVBAR -->
 <header class="navbar">
@@ -172,6 +186,9 @@
 </section>
 
 <section class="how-it-works">
+  <div class="why-item fade-up">...</div>
+  <div class="step fade-up">...</div>
+
   <h2 class="section-title lang-ar">
     <i class="fa-solid fa-gear"></i> كيف تعمل الخدمة؟
   </h2>
@@ -228,6 +245,9 @@
 
 <!-- VISUAL / CTA -->
 <section class="visual">
+  <div class="why-item fade-up">...</div>
+  <div class="step fade-up">...</div>
+
   <div class="hero-content">
 
     <div class="hero-text lang-ar">
@@ -302,6 +322,7 @@
 
 </body>
 </html>
+
 
 
 
