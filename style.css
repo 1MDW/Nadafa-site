@@ -501,6 +501,40 @@ html[dir="rtl"] .icon-text {
   }
 }
 
+@media (max-width: 768px) {
+
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .why-item, .step {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .why-item i {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .step-number {
+    font-size: 28px;
+  }
+
+  .why-item {
+    border-left: none;
+    border-top: 4px solid #2e8b57;
+  }
+
+}
+@media (hover: hover) {
+  .why-item:hover,
+  .step:hover {
+    background-color: #f1fdf6;
+  }
+}
+
 
 
 
