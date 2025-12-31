@@ -422,6 +422,60 @@ html[dir="rtl"] .icon-text {
   flex-direction: row-reverse;
 }
 
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.section-title i {
+  margin-left: 8px;
+}
+
+.why-list, .steps {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* WHY SECTION */
+.why-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-left: 4px solid #2e8b57;
+  background: #f9f9f9;
+  transition: transform 0.2s ease;
+}
+
+.why-item:hover {
+  transform: translateX(5px);
+}
+
+.why-item i {
+  font-size: 26px;
+  color: #2e8b57;
+}
+
+/* HOW IT WORKS */
+.step {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.step-number {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2e8b57;
+}
+
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
   .hero-content {
@@ -434,6 +488,7 @@ html[dir="rtl"] .icon-text {
     justify-content: center;
   }
 }
+
 
 
 
