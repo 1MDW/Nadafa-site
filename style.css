@@ -488,16 +488,26 @@ html[dir="rtl"] .icon-text {
 }
 
 section {
-  padding: 80px 6%;
+  padding: 45px 6%;
 }
 .hero {
-  padding: 110px 6% 90px;
+  padding: 70px 6% 55px;
 }
 .features,
 .how-it-works,
 .trust {
-  padding: 90px 6%;
+  padding: 55px 6%;
 }
+
+.visual {
+  padding: 60px 0;
+}
+
+.visual img {
+  max-width: 90%;
+}
+
+
 
 
 /* ================= RESPONSIVE ================= */
@@ -546,6 +556,7 @@ section {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
