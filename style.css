@@ -80,46 +80,29 @@ a {
   transform: translateY(-2px);
 }
 
-/* WHATSAPP BUTTON - GLOBAL */
+/* WHATSAPP BUTTON */
 .btn-whatsapp {
-  flex: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-
   background: linear-gradient(135deg, #25d366, #1ebe5d);
   color: #fff;
-
   padding: 12px 18px;
   border-radius: 30px;
-
   font-weight: 600;
   font-size: 15px;
-
-  transition: 
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* HOVER EFFECT */
 .btn-whatsapp:hover {
   transform: translateY(-3px) scale(1.03);
   box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
-  background: linear-gradient(135deg, #1ebe5d, #25d366);
 }
 
-/* ACTIVE (CLICK) */
-.btn-whatsapp:active {
-  transform: translateY(0) scale(0.98);
-  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
-}
-
-
-/* ================= HERO ================= */
+/* ================= HERO (HOME) ================= */
 .hero {
-  padding: 80px 30px;
+  padding: 55px 6% 45px; /* reduced */
   background: linear-gradient(135deg, #e3f2fd, #ffffff);
 }
 
@@ -129,18 +112,18 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 40px;
+  gap: 28px; /* reduced */
 }
 
 .hero-text h1 {
   font-size: 42px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .hero-text p {
   font-size: 18px;
   color: #555;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
 .hero-img img {
@@ -150,9 +133,14 @@ a {
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
+/* ================= SECTIONS (HOME SPACING REDUCED) ================= */
+section {
+  padding: 35px 6%;
+}
+
 /* ================= FEATURES ================= */
 .features {
-  padding: 100px 30px;
+  padding: 50px 6%; /* reduced */
   background: #ffffff;
   text-align: center;
 }
@@ -160,86 +148,47 @@ a {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-  max-width: 1000px;   /* كبرنا المساحة */
+  gap: 28px; /* reduced */
+  max-width: 1000px;
   margin: auto;
-  padding: 20px;       /* باش ما يلصقوش فالحواف */
+  padding: 10px;
 }
 
-
-/* CARD – ANIMATED */
+/* CARD */
 .card {
   background: #f7f9fb;
-  padding: 30px 25px;
+  padding: 24px 22px; /* reduced */
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-  transition: 
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    background 0.35s ease;
-  position: relative;
-  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* Light gradient overlay */
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(30,136,229,0.08),
-    transparent
-  );
-  opacity: 0;
-  transition: opacity 0.35s ease;
-}
-
-/* Hover effect */
 .card:hover {
-  transform: translateY(-12px) scale(1.02);
+  transform: translateY(-10px);
   box-shadow: 0 25px 45px rgba(0,0,0,0.12);
   background: #ffffff;
 }
 
-.card:hover::before {
-  opacity: 1;
-}
-
-/* card */
 .card h3 {
   font-size: 22px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #1e88e5;
-  transition: transform 0.3s ease;
 }
 
-.card:hover h3 {
-  transform: translateY(-3px);
-}
-
-/* Text */
 .card p {
   color: #555;
   font-size: 15px;
   line-height: 1.7;
 }
 
-
 /* ================= PAGE HEADER ================= */
 .page-header {
   text-align: center;
-  padding: 60px 20px 30px;
+  padding: 50px 20px 25px;
 }
 
 .page-header h1 {
   font-size: 34px;
-  margin-bottom: 10px;
-}
-
-.page-header p {
-  color: #666;
 }
 
 /* ================= TARIFS ================= */
@@ -264,72 +213,10 @@ a {
   transform: translateY(-8px);
 }
 
-.tarif-card h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
 .price {
   font-size: 28px;
   font-weight: 700;
   color: #1e88e5;
-  margin-bottom: 20px;
-}
-
-.features {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.icon-text {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
-.icon-text i {
-  color: #1e88e5;
-}
-
-.btn-group {
-  display: flex;
-  gap: 10px;
-}
-
-.btn-reserver {
-  flex: 1;
-  text-align: center;
-  background: linear-gradient(135deg, #1e88e5, #42a5f5);
-  color: #fff;
-  padding: 12px;
-  border-radius: 10px;
-  font-weight: 600;
-  text-decoration: none;
-
-  transition: 
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
-
-  box-shadow: 0 4px 10px rgba(30, 136, 229, 0.25);
-}
-.btn-reserver:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(30, 136, 229, 0.4);
-  background: linear-gradient(135deg, #1565c0, #1e88e5);
-}
-
-.btn-reserver:active {
-  transform: translateY(0);
-  box-shadow: 0 5px 12px rgba(30, 136, 229, 0.3);
-}
-
-
-.popular {
-  border: 2px solid #1e88e5;
 }
 
 /* ================= RESERVATION ================= */
@@ -347,51 +234,22 @@ a {
 }
 
 .form-group {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
-
-.form-group label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-}
-
-.form-group input,
-.form-group select {
-  width: 100%;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-}
-
-.confirm-btn-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-}
-
-/* الزر نفس الحجم فاللغتين */
-.confirm-btn-wrapper .btn-primary {
-  min-width: 220px;
-  text-align: center;
-}
-
-
 
 /* ================= FOOTER ================= */
 .site-footer {
   background: #0f172a;
   padding: 25px 20px;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .footer-content {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 15px;
 }
 
@@ -400,172 +258,10 @@ a {
   font-size: 14px;
 }
 
-.footer-links {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.footer-link {
-  color: #e5e7eb;
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-  color: #38bdf8;
-}
-
-/* ================= RTL FIX ================= */
-html[dir="rtl"] .icon-text {
-  flex-direction: row-reverse;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 40px;
-}
-
-.section-title i {
-  margin-left: 8px;
-}
-
-.why-list, .steps {
-  max-width: 900px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-/* WHY SECTION */
-.why-item {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-  border-left: 4px solid #2e8b57;
-  background: #f9f9f9;
-  transition: transform 0.2s ease;
-}
-
-.why-item:hover {
-  transform: translateX(5px);
-}
-
-.why-item i {
-  font-size: 26px;
-  color: #2e8b57;
-}
-
-/* HOW IT WORKS */
-.step {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-  background: #ffffff;
-  border-bottom: 1px solid #ddd;
-}
-
-.step-number {
-  font-size: 32px;
-  font-weight: bold;
-  color: #2e8b57;
-}
-
-/* ANIMATION */
-.fade-up {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease;
-}
-
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-section {
-  padding: 45px 6%;
-}
-.hero {
-  padding: 70px 6% 55px;
-}
-.features,
-.how-it-works,
-.trust {
-  padding: 55px 6%;
-}
-
-.visual {
-  padding: 60px 0;
-}
-
-.visual img {
-  max-width: 90%;
-}
-
-
-
-
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
   }
-
-  .nav-actions {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 }
-
-@media (max-width: 768px) {
-
-  .section-title {
-    font-size: 22px;
-    margin-bottom: 25px;
-  }
-
-  .why-item, .step {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .why-item i {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
-
-  .step-number {
-    font-size: 28px;
-  }
-
-  .why-item {
-    border-left: none;
-    border-top: 4px solid #2e8b57;
-  }
-
-}
-@media (hover: hover) {
-  .why-item:hover,
-  .step:hover {
-    background-color: #f1fdf6;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
