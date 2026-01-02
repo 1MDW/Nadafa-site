@@ -521,7 +521,7 @@ section {
 }
 
 .visual {
-  padding: 60px 0;
+  padding: 0px 0;
 }
 
 .visual img {
@@ -580,6 +580,7 @@ section {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
