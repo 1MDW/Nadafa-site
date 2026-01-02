@@ -523,7 +523,7 @@ section {
 }
 
 .how-it-works {
-  padding-top: 5px;   /* كان 55px → ولى أصغر */
+  padding-top: 55px;   /* كان 55px → ولى أصغر */
 }
 
 .how-it-works h2 {
@@ -577,6 +577,7 @@ section {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
