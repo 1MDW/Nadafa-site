@@ -282,6 +282,27 @@ a {
   margin-bottom: 20px;
 }
 
+.features > div {
+  margin-bottom: 16px;
+}
+
+.features > div:last-child {
+  margin-bottom: 0;
+}
+
+
+.features h2 {
+  margin-bottom: 10px;
+}
+
+.features p {
+  margin-bottom: 8px;
+}
+
+.features p:last-child {
+  margin-bottom: 0;
+}
+
 .icon-text {
   display: flex;
   align-items: center;
@@ -556,6 +577,7 @@ section {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
