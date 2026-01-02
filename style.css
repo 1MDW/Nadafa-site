@@ -283,7 +283,7 @@ a {
 }
 
 .features > div {
-  margin-bottom: 16px;
+  margin-bottom: 30px;
 }
 
 .features > div:last-child {
@@ -577,6 +577,7 @@ section {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
