@@ -152,7 +152,7 @@ a {
 
 /* ================= FEATURES ================= */
 .features {
-  padding: 50px 50px 50px;
+  padding: 50px 70px 70px;
   background: #ffffff;
   text-align: center;
 }
@@ -526,6 +526,9 @@ section {
   padding-top: 5px;   /* كان 55px → ولى أصغر */
 }
 
+.how-it-works h2 {
+  margin-top: 0;   
+}
 
 
 /* ================= RESPONSIVE ================= */
@@ -574,6 +577,7 @@ section {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
