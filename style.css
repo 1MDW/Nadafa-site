@@ -529,6 +529,14 @@ section {
 .how-it-works h2 {
   margin-top: 0;   
 }
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+section h2 {
+  margin-top: 0;
+}
 
 
 /* ================= RESPONSIVE ================= */
@@ -577,6 +585,7 @@ section {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
