@@ -152,7 +152,7 @@ a {
 
 /* ================= FEATURES ================= */
 .features {
-  padding: 50px 70px 70px;
+  padding: 80px 30px 30px;
   background: #ffffff;
   text-align: center;
 }
@@ -577,6 +577,7 @@ section {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
