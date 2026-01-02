@@ -517,7 +517,7 @@ section {
 .features,
 .how-it-works,
 .trust {
-  padding: 55px 6%;
+  padding: 0px 6%;
 }
 
 .visual {
@@ -580,6 +580,7 @@ section {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
