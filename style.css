@@ -528,6 +528,9 @@ section {
   max-width: 90%;
 }
 
+.how-it-works {
+  padding-top: 30px;   /* كان 55px → ولى أصغر */
+}
 
 
 
@@ -577,6 +580,7 @@ section {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
