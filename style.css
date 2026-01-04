@@ -303,7 +303,7 @@ a {
 }
 
 .features > div:last-child {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 
@@ -316,7 +316,7 @@ a {
 }
 
 .features p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .icon-text {
@@ -607,6 +607,7 @@ section h2 {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
