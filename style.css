@@ -158,6 +158,27 @@ a {
   padding-bottom: 50px;
 }
 
+.features > div {
+  margin-bottom: 35px;
+}
+
+.features > div:last-child {
+  margin-bottom: 0;
+}
+
+
+.features h2 {
+  margin-bottom: 10px;
+}
+
+.features p {
+  margin-bottom: 8px;
+}
+
+.features p:last-child {
+  margin-bottom: 0;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -586,6 +607,7 @@ section h2 {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
