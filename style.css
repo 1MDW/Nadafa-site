@@ -72,6 +72,20 @@ a {
   background: #1565c0;
 }
 
+/* ===============================
+   BUTTON MICRO-ANIMATION
+   =============================== */
+
+.btn-primary {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(30,136,229,0.35);
+}
+
+
 /* WhatsApp */
 .btn-whatsapp {
   display: inline-flex;
@@ -286,6 +300,34 @@ section::before {
 }
 
 /* ===============================
+   TARIFS ANIMATIONS
+   =============================== */
+
+.tarif-card {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeUp 0.6s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* stagger effect */
+.tarif-card:nth-child(1) { animation-delay: 0.1s; }
+.tarif-card:nth-child(2) { animation-delay: 0.2s; }
+.tarif-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* hover effect */
+.tarif-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* button hover inside tarifs */
+.tarif-card .btn-reserver:hover {
+  transform: scale(1.03);
+}
+
+
+/* ===============================
    RESERVATION PAGE FIX (COMPATIBLE)
    =============================== */
 
@@ -362,6 +404,41 @@ section::before {
   max-width: 320px;
 }
 
+
+/* ===============================
+   RESERVATION ANIMATIONS
+   =============================== */
+
+.reservation-form {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* form groups stagger */
+.form-group {
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.15s; }
+.form-group:nth-child(3) { animation-delay: 0.2s; }
+.form-group:nth-child(4) { animation-delay: 0.25s; }
+.form-group:nth-child(5) { animation-delay: 0.3s; }
+.form-group:nth-child(6) { animation-delay: 0.35s; }
+.form-group:nth-child(7) { animation-delay: 0.4s; }
+
+/* inputs hover/focus */
+.form-group input,
+.form-group select {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.15);
+}
+
+
 /* ===============================
    RTL FIXES
    =============================== */
@@ -435,6 +512,7 @@ html[dir="rtl"] .icon-text {
     text-align: center;
   }
 }
+
 
 
 
