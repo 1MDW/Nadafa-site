@@ -546,6 +546,7 @@ section {
 
 .how-it-works {
   padding-top: 55px;   /* كان 55px → ولى أصغر */
+  margin-bottom: 200px;
 }
 
 .how-it-works h2 {
@@ -607,6 +608,7 @@ section h2 {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
