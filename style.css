@@ -519,7 +519,7 @@ section {
 }
 
 .visual img {
-  max-width: 90%;
+  max-width: 50%;
 }
 
 .how-it-works {
@@ -586,6 +586,7 @@ section h2 {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
