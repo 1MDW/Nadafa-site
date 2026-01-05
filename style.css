@@ -154,9 +154,8 @@ a {
 .features {
   background: #ffffff;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 200px;
   padding-bottom: 50px;
-  margin-bottom: 200px;
 }
 
 .features > div {
@@ -590,6 +589,7 @@ section h2 {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
