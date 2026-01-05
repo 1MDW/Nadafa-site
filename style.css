@@ -154,30 +154,24 @@ a {
 .features {
   background: #ffffff;
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 80px 20px; /* espace مريح و premium */
 }
 
+/* cards / items داخل features */
 .features > div {
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
-.features > div:last-child {
-  margin-bottom: 200px;
-}
-
-
+/* العنوان */
 .features h2 {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
+/* النص */
 .features p {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
-.features p:last-child {
-  margin-bottom: 20px;
-}
 
 .cards {
   display: grid;
@@ -511,11 +505,6 @@ section {
 .hero {
   padding: 70px 6% 55px;
 }
-.features,
-.how-it-works,
-.trust {
-  padding: 0px 6%;
-}
 
 .visual {
   padding: 0px 0;
@@ -589,6 +578,7 @@ section h2 {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
