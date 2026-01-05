@@ -156,6 +156,7 @@ a {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
+  margin-bottom: 200px;
 }
 
 .features > div {
@@ -163,7 +164,7 @@ a {
 }
 
 .features > div:last-child {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 
@@ -176,7 +177,7 @@ a {
 }
 
 .features p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .cards {
@@ -298,26 +299,7 @@ a {
   margin-bottom: 20px;
 }
 
-.features > div {
-  margin-bottom: 35px;
-}
 
-.features > div:last-child {
-  margin-bottom: 20px;
-}
-
-
-.features h2 {
-  margin-bottom: 10px;
-}
-
-.features p {
-  margin-bottom: 8px;
-}
-
-.features p:last-child {
-  margin-bottom: 20px;
-}
 
 .icon-text {
   display: flex;
@@ -546,7 +528,7 @@ section {
 
 .how-it-works {
   padding-top: 55px;   /* كان 55px → ولى أصغر */
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .how-it-works h2 {
@@ -608,6 +590,7 @@ section h2 {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
