@@ -472,17 +472,25 @@ html[dir="rtl"] .icon-text {
 }
 
 /* HOW IT WORKS */
+.steps {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
 .step {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  gap: 18px;
   padding: 20px;
   background: #ffffff;
-  border-bottom: 1px solid #ddd;
+  border-radius: 12px;
+  border: 1px solid #eee;
 }
 
 .step-number {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: bold;
   color: #2e8b57;
 }
@@ -578,6 +586,7 @@ section h2 {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
