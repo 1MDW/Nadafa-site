@@ -152,9 +152,9 @@ a {
 
 /* ================= FEATURES ================= */
 .features {
-  background: #fffff1;
+  background: #ffffff;
   text-align: center;
-  padding: 80px 20px; /* espace مريح و premium */
+  padding: 50px 10px; /* espace مريح و premium */
 }
 
 /* cards / items داخل features */
@@ -578,6 +578,7 @@ section h2 {
     background-color: #f1fdf6;
   }
 }
+
 
 
 
