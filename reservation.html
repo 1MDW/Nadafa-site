@@ -9,51 +9,64 @@
 </head>
 
 <script>
-function validateReservation() {
-  const name = document.querySelector('input[type="text"][required]');
-  const phone = document.querySelector('input[type="tel"]');
-  const city = document.querySelector('select[required]');
-  const date = document.querySelector('input[type="date"]');
+document.addEventListener('DOMContentLoaded', function () {
 
-  // duration: AR أو FR
-  const durationAR = document.querySelector('select.lang-ar');
-  const durationFR = document.querySelector('select.lang-fr');
-  const duration = durationAR.style.display !== 'none' ? durationAR : durationFR;
+  function validateReservation() {
 
-  if (
-    !name.value.trim() ||
-    !phone.value.trim() ||
-    !city.value ||
-    !date.value ||
-    !duration.value
-  ) {
-    alert(
-      document.documentElement.lang === 'ar'
-        ? 'عافاك عمّر جميع المعلومات المطلوبة قبل تأكيد الحجز'
-        : 'Veuillez remplir جميع les champs obligatoires قبل التأكيد'
-    );
-    return false;
+    const name = document.getElementById('fullName');
+    const phone = document.getElementById('phone');
+    const city = document.getElementById('city');
+    const date = document.getElementById('date');
+
+    const durationAR = document.getElementById('duration-ar');
+    const durationFR = document.getElementById('duration-fr');
+
+    const currentLang = document.documentElement.lang;
+    const duration = currentLang === 'ar' ? durationAR : durationFR;
+
+    if (
+      !name || !phone || !city || !date || !duration ||
+      name.value.trim() === '' ||
+      phone.value.trim() === '' ||
+      city.value === '' ||
+      date.value === '' ||
+      duration.value === ''
+    ) {
+      alert(
+        currentLang === 'ar'
+          ? '⚠️ عافاك عمّر جميع الخانات الضرورية قبل تأكيد الحجز.\n\nالبريد الإلكتروني اختياري.'
+          : '⚠️ Veuillez remplir tous les champs obligatoires avant de confirmer.\n\nL’adresse email est optionnelle.'
+      );
+      return false;
+    }
+
+    return true;
   }
 
-  return true;
-}
+  const btnAR = document.getElementById('confirmReservation');
+  const btnFR = document.getElementById('confirmReservationFr');
 
-// AR
-document.getElementById('confirmReservation').addEventListener('click', function (e) {
-  e.preventDefault();
-  if (validateReservation()) {
-    window.location.href = 'confirmation.html';
+  if (btnAR) {
+    btnAR.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (validateReservation()) {
+        window.location.href = 'confirmation.html';
+      }
+    });
   }
-});
 
-// FR
-document.getElementById('confirmReservationFr').addEventListener('click', function (e) {
-  e.preventDefault();
-  if (validateReservation()) {
-    window.location.href = 'confirmation.html';
+  if (btnFR) {
+    btnFR.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (validateReservation()) {
+        window.location.href = 'confirmation.html';
+      }
+    });
   }
+
 });
 </script>
+
 
 <body>
 
