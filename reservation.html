@@ -3,86 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Réservation | Nadafa</title>
-  <meta name="description" content="Réservez facilement votre service de ménage à domicile avec Nadafa. احجز بسهولة خدمة النظافة المنزلية مع نضافة بكل ثقة وسرعة.">
+  <meta name="description" content="Réservez facilement votre service de ménage à domicile avec Nadafa.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-
-  function validateReservation() {
-
-    const name = document.getElementById('fullName');
-    const phone = document.getElementById('phone');
-    const city = document.getElementById('city');
-    const date = document.getElementById('date');
-
-    const durationAR = document.getElementById('duration-ar');
-    const durationFR = document.getElementById('duration-fr');
-
-    const currentLang = document.documentElement.lang;
-    const duration = currentLang === 'ar' ? durationAR : durationFR;
-
-    if (
-      !name || !phone || !city || !date || !duration ||
-      name.value.trim() === '' ||
-      phone.value.trim() === '' ||
-      city.value === '' ||
-      date.value === '' ||
-      duration.value === ''
-    ) {
-      alert(
-        currentLang === 'ar'
-          ? '⚠️ عافاك عمّر جميع الخانات الضرورية قبل تأكيد الحجز.\n\nالبريد الإلكتروني اختياري.'
-          : '⚠️ Veuillez remplir tous les champs obligatoires avant de confirmer.\n\nL’adresse email est optionnelle.'
-      );
-      return false;
-    }
-
-    return true;
-  }
-
-  const btnAR = document.getElementById('confirmReservation');
-  const btnFR = document.getElementById('confirmReservationFr');
-
-  if (btnAR) {
-    btnAR.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (validateReservation()) {
-        window.location.href = 'confirmation.html';
-      }
-    });
-  }
-
-  if (btnFR) {
-    btnFR.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (validateReservation()) {
-        window.location.href = 'confirmation.html';
-      }
-    });
-  }
-
-});
-</script>
-
 
 <body>
 
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="logo">Nadafa</div>
-  
-   <div class="nav-actions">
-    <a href="index.html" class="nav-link">
-      <i class="fa-solid fa-house"></i>
-    </a>
-
-   <span class="nav-link" onclick="switchLang('ar')">AR</span>
-   <span>|</span>
-   <span class="nav-link" onclick="switchLang('fr')">FR</span>
-
+  <div class="nav-actions">
+    <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i></a>
+    <span class="nav-link" onclick="switchLang('ar')">AR</span>
+    <span>|</span>
+    <span class="nav-link" onclick="switchLang('fr')">FR</span>
   </div>
 </header>
 
@@ -90,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
 <section class="page-header">
   <h1 class="lang-ar">حجز الخدمة</h1>
   <h1 class="lang-fr">Réserver un service</h1>
-
   <p class="lang-ar">املأ المعلومات وسنتكفل بالباقي</p>
   <p class="lang-fr">Remplissez le formulaire</p>
 </section>
@@ -102,23 +36,26 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="form-group">
       <label class="lang-ar">الاسم الكامل</label>
       <label class="lang-fr">Nom complet</label>
-      <input type="text" required>
+      <input type="text" id="fullName" required>
     </div>
 
     <div class="form-group">
       <label class="lang-ar">رقم الهاتف</label>
       <label class="lang-fr">Téléphone</label>
-      <input type="tel" required>
+      <input type="tel" id="phone" required>
     </div>
- <div class="form-group">
+
+    <div class="form-group">
       <label class="lang-ar">(إختياري) البريد الإلكتروني</label>
       <label class="lang-fr">Adresse mail (optionnelle)</label>
-      <input type="text" >
+      <input type="text">
     </div>
+
     <div class="form-group">
       <label class="lang-ar">المدينة</label>
       <label class="lang-fr">Ville</label>
-      <select required>
+      <select id="city" required>
+        <option value="">--</option>
         <option>Casablanca</option>
         <option>Rabat</option>
         <option>Marrakech</option>
@@ -132,42 +69,35 @@ document.addEventListener('DOMContentLoaded', function () {
       <input type="text">
     </div>
 
-  <div class="form-group">
-  <!-- Label -->
-  <label class="lang-ar">مدة الخدمة</label>
-  <label class="lang-fr">Durée</label>
+    <div class="form-group">
+      <label class="lang-ar">مدة الخدمة</label>
+      <label class="lang-fr">Durée</label>
 
-  <!-- Select AR -->
-  <select class="lang-ar">
-    <option value="2h">2 ساعات – 120 درهم</option>
-    <option value="3h">3 ساعات – 170 درهم</option>
-    <option value="4h">4 ساعات – 220 درهم</option>
-  </select>
+      <select class="lang-ar" id="duration-ar">
+        <option value="">--</option>
+        <option value="2h">2 ساعات – 120 درهم</option>
+        <option value="3h">3 ساعات – 170 درهم</option>
+        <option value="4h">4 ساعات – 220 درهم</option>
+      </select>
 
-  <!-- Select FR -->
-  <select class="lang-fr">
-    <option value="2h">2 heures – 120 DH</option>
-    <option value="3h">3 heures – 170 DH</option>
-    <option value="4h">4 heures – 220 DH</option>
-  </select>
-</div>
-
+      <select class="lang-fr" id="duration-fr">
+        <option value="">--</option>
+        <option value="2h">2 heures – 120 DH</option>
+        <option value="3h">3 heures – 170 DH</option>
+        <option value="4h">4 heures – 220 DH</option>
+      </select>
+    </div>
 
     <div class="form-group">
       <label class="lang-ar">التاريخ</label>
       <label class="lang-fr">Date</label>
-      <input type="date" required>
+      <input type="date" id="date" required>
     </div>
 
-<div class="confirm-btn-wrapper">
-  <a href="#" id="confirmReservation" class="btn-primary lang-ar">
-    تأكيد الحجز
-  </a>
-
-  <a href="#" id="confirmReservationFr" class="btn-primary lang-fr">
-    Confirmer la réservation
-  </a>
-</div>
+    <div class="confirm-btn-wrapper">
+      <a href="#" id="confirmReservation" class="btn-primary lang-ar">تأكيد الحجز</a>
+      <a href="#" id="confirmReservationFr" class="btn-primary lang-fr">Confirmer la réservation</a>
+    </div>
 
   </form>
 </section>
@@ -177,6 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="lang-fr">© 2025 Nadafa – Maroc</div>
 </footer>
 
+<!-- JS -->
 <script>
 function switchLang(lang) {
   document.querySelectorAll('.lang-fr').forEach(e => e.style.display = lang === 'fr' ? 'block' : 'none');
@@ -185,6 +116,41 @@ function switchLang(lang) {
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 }
 switchLang('ar');
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  function validateReservation() {
+    const name = document.getElementById('fullName');
+    const phone = document.getElementById('phone');
+    const city = document.getElementById('city');
+    const date = document.getElementById('date');
+
+    const duration = document.documentElement.lang === 'ar'
+      ? document.getElementById('duration-ar')
+      : document.getElementById('duration-fr');
+
+    if (!name.value || !phone.value || !city.value || !date.value || !duration.value) {
+      alert(
+        document.documentElement.lang === 'ar'
+          ? '⚠️ عافاك عمّر جميع الخانات الضرورية. البريد الإلكتروني اختياري.'
+          : '⚠️ Veuillez remplir tous les champs obligatoires. L’email est optionnel.'
+      );
+      return false;
+    }
+    return true;
+  }
+
+  document.getElementById('confirmReservation').onclick = function (e) {
+    e.preventDefault();
+    if (validateReservation()) window.location.href = 'confirmation.html';
+  };
+
+  document.getElementById('confirmReservationFr').onclick = function (e) {
+    e.preventDefault();
+    if (validateReservation()) window.location.href = 'confirmation.html';
+  };
+
+});
 </script>
 
 </body>
