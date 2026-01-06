@@ -7,6 +7,54 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
+<script>
+function validateReservation() {
+  const name = document.querySelector('input[type="text"][required]');
+  const phone = document.querySelector('input[type="tel"]');
+  const city = document.querySelector('select[required]');
+  const date = document.querySelector('input[type="date"]');
+
+  // duration: AR أو FR
+  const durationAR = document.querySelector('select.lang-ar');
+  const durationFR = document.querySelector('select.lang-fr');
+  const duration = durationAR.style.display !== 'none' ? durationAR : durationFR;
+
+  if (
+    !name.value.trim() ||
+    !phone.value.trim() ||
+    !city.value ||
+    !date.value ||
+    !duration.value
+  ) {
+    alert(
+      document.documentElement.lang === 'ar'
+        ? 'عافاك عمّر جميع المعلومات المطلوبة قبل تأكيد الحجز'
+        : 'Veuillez remplir جميع les champs obligatoires قبل التأكيد'
+    );
+    return false;
+  }
+
+  return true;
+}
+
+// AR
+document.getElementById('confirmReservation').addEventListener('click', function (e) {
+  e.preventDefault();
+  if (validateReservation()) {
+    window.location.href = 'confirmation.html';
+  }
+});
+
+// FR
+document.getElementById('confirmReservationFr').addEventListener('click', function (e) {
+  e.preventDefault();
+  if (validateReservation()) {
+    window.location.href = 'confirmation.html';
+  }
+});
+</script>
+
 <body>
 
 <!-- NAVBAR -->
@@ -98,17 +146,15 @@
       <input type="date" required>
     </div>
 
-   <div class="confirm-btn-wrapper">
-  <a href="confirmation.html" class="btn-primary lang-ar">
+<div class="confirm-btn-wrapper">
+  <a href="#" id="confirmReservation" class="btn-primary lang-ar">
     تأكيد الحجز
   </a>
 
-  <a href="confirmation.html" class="btn-primary lang-fr">
-    Confirmer la reservation
+  <a href="#" id="confirmReservationFr" class="btn-primary lang-fr">
+    Confirmer la réservation
   </a>
 </div>
-
-
 
   </form>
 </section>
